@@ -1,0 +1,46 @@
+hero:
+  eyebrow: "Jennifer Severns · Fractional executive"
+  title: "The hardest problems rarely belong to one department."
+  body: "I help organizations connect customer experience, operations, technology, and people—then turn that clarity into a way of working that lasts."
+  services: "Experience strategy · Transformation · AI & innovation · Operating models"
+  primary_cta: "Start with a conversation"
+  secondary_cta: "See when to call me"
+
+diagnosis:
+  eyebrow: "The real problem"
+  title: "Your organization may not need another initiative. It may need the pieces to work together."
+  body: "Growth creates seams: between what customers expect and what operations can deliver; between the technology you bought and the behavior it requires; between leadership's intent and the team's daily reality. I work in those seams."
+  signs:
+    - "Teams are busy, but priorities and ownership remain unclear."
+    - "A transformation is technically live, but people have not adopted it."
+    - "Customer, employee, and business needs are being solved separately."
+    - "AI is creating urgency before the organization has a useful strategy."
+
+model:
+  eyebrow: "My operating principle"
+  title: "Build capability, not dependency."
+  intro: "I am there to create momentum, transfer the method, and leave your organization stronger—not to make myself permanent."
+  steps:
+    - number: "01"
+      title: "See the system"
+      body: "Listen across levels, map the experience, and make the invisible friction visible."
+    - number: "02"
+      title: "Choose the leverage point"
+      body: "Turn a broad challenge into a focused decision, a measurable outcome, and a practical first move."
+    - number: "03"
+      title: "Build with the people who own it"
+      body: "Create the playbooks, operating rhythms, and confidence your team needs to carry the work forward."
+
+about:
+  eyebrow: "About Jennifer"
+  title: "A creative executive who can move from the boardroom to the workflow."
+  body: "I have spent more than 25 years helping organizations make complex change human. My work spans executive leadership, experience and service design, digital transformation, operations, brand systems, data, and emerging technology. I have led multidisciplinary teams and enterprise programs for organizations including ThomasArts, UCLA Health, the American Marketing Association, Allstate, and Harpo Productions."
+  detail: "Based in Chicago. M.S. in Information Design & Strategy from Northwestern University; B.F.A. in Graphic Design from the University of Tennessee."
+
+consultation:
+  eyebrow: "A useful first step"
+  title: "Two conversations. No sales theater."
+  body: "The first call is up to 60 minutes and focused on your situation. I will listen, ask questions, and identify what may be underneath the visible problem. If there is enough substance to be helpful, we will schedule a second complimentary call where I bring back an initial framework, possible paths, and an honest view of whether I am the right partner."
+  cta: "Schedule the first call"
+  note: "No obligation. Placeholder scheduling link—replace when ready."
+

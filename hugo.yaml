@@ -1,0 +1,16 @@
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "Jennifer Severns | Fractional Experience & Transformation Executive"
+disableKinds: ["taxonomy", "term"]
+
+params:
+  description: "Fractional executive leadership for organizations navigating experience, operations, technology, and change."
+  author: "Jennifer Severns"
+  email: "jennifer@severns.net"
+  linkedin: "https://www.linkedin.com/in/jennerus"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
