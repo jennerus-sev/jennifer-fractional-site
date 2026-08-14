@@ -267,3 +267,16 @@ section[id]{scroll-margin-top:68px}
 .text-link .link-label{position:relative}.text-link .link-label::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.22,.7,.25,1)}.text-link:hover .link-label::after,.text-link:focus-visible .link-label::after{transform:scaleX(1)}
 .site-footer .footer-link{text-decoration-line:underline;text-decoration-color:rgba(255,255,255,.7);transition:text-decoration-color .22s ease}.site-footer .footer-link:hover,.site-footer .footer-link:focus-visible{text-decoration-color:var(--orange)}
 @media(prefers-reduced-motion:reduce){.text-link .link-label::after,.site-footer .footer-link{transition:none}}
+
+/* Local About-section career history mockup. */
+.about{align-items:start;padding-top:62px;padding-bottom:72px}.about-copy{padding-right:24px}.about-intro,.about-close,.selected-clients{max-width:650px}.about-intro{font-size:13px!important;line-height:1.55}.career-history{display:grid;grid-template-columns:1.25fr .85fr;gap:34px;margin:28px 0 24px}.career-group h3{margin-bottom:12px;color:var(--orange);font-size:11px;line-height:1.2;letter-spacing:.075em;text-transform:uppercase}.career-group ul{list-style:none;margin:0;padding:0}.career-group li{padding:10px 0;border-top:1px solid rgba(17,17,15,.2)}.career-group li:last-child{border-bottom:1px solid rgba(17,17,15,.2)}.career-group strong,.career-group span{display:block}.career-group strong{font:600 13px/1.25 var(--sans)}.career-group span{margin-top:3px;font-size:11px;line-height:1.35}.selected-clients{font-size:11px!important;line-height:1.55}.selected-clients strong{margin-right:7px;color:var(--teal);font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.055em}.about-close{font-size:12px!important;line-height:1.55}.about .portrait{margin-top:118px}
+@media(max-width:900px){.career-history{grid-template-columns:1fr;gap:24px}.about .portrait{margin-top:72px}}
+@media(max-width:680px){.about-copy{padding-right:0}.about .portrait{margin-top:0}.career-history{margin-top:24px}}
+
+/* Career-history intro and balanced wordmark scale. */
+.about-intro,.about-education,.selected-clients{max-width:650px}.about-education{font-size:12px!important;line-height:1.55;margin-bottom:28px}.wordmark small{font-size:13px}
+
+/* About: portrait beside the introduction; career history spans the page. */
+.about .about-copy{padding-right:0}.about{column-gap:38px;row-gap:20px}.about .portrait{align-self:start;margin-top:18px}.about .career-history,.about>.selected-clients{grid-column:1/-1;width:100%}.about .career-history{grid-template-columns:1fr 1fr;margin:0}.about>.selected-clients{max-width:none;margin:0}
+@media(max-width:900px){.about .portrait{margin-top:18px}.about .career-history{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.about .portrait{grid-row:auto;margin:0 auto}.about .career-history{grid-template-columns:1fr;gap:24px}}
