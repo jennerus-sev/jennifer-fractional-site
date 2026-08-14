@@ -156,7 +156,7 @@ section[id]{scroll-margin-top:68px}
 @media(prefers-reduced-motion:reduce){.section-check::after{clip-path:none}.section-check::after,.scenario-card,.scenario-cta{transition:none}}
 
 /* Experimental dotted journey from the green hero circle into the peach section. */
-.hero{overflow:visible}.hero-dotted-path{position:absolute;z-index:1;top:268px;right:max(calc(var(--gutter) + 59px),calc((100vw - var(--page))/2 + 131px));display:block;width:2px;height:329px;background:#666762;box-shadow:-39px 0 0 #666762,-26px 0 0 #666762,-13px 0 0 #666762,13px 0 0 #666762,26px 0 0 #666762,39px 0 0 #666762;pointer-events:none;clip-path:inset(0 -43px 100% -43px);animation:drawHeroPath 2.6s cubic-bezier(.3,.65,.25,1) .8s forwards}.hero-dotted-path i{display:none}
+.hero{overflow:visible}.hero-dotted-path{position:absolute;z-index:1;top:268px;right:max(calc(var(--gutter) + 59px),calc((100vw - var(--page))/2 + 131px));bottom:-1px;display:block;width:2px;height:auto;background:#666762;box-shadow:-39px 0 0 #666762,-26px 0 0 #666762,-13px 0 0 #666762,13px 0 0 #666762,26px 0 0 #666762,39px 0 0 #666762;pointer-events:none;clip-path:inset(0 -43px 100% -43px);animation:drawHeroPath 2.6s cubic-bezier(.3,.65,.25,1) .8s forwards}.hero-dotted-path i{display:none}
 .bridge{position:relative;z-index:8}
 @keyframes drawHeroPath{to{clip-path:inset(0 -43px 0 -43px)}}
 @media(max-width:900px){.hero-dotted-path{display:none}}
