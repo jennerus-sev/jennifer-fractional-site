@@ -1,17 +1,60 @@
 - quote: "Jennifer humanizes technology unlike anyone I have ever worked with. She led the effort to solve operational problems that had been deemed unsolvable for years."
+  group: 1
   name: "Steve Bartholomew"
   role: "Marketing executive and former leadership-team colleague"
   level: "Peer"
 - quote: "She played a key role in the digital transformation of the AMA. This transformative change would not have been possible without Jennifer's leadership."
+  group: 1
   name: "Jeremy Van Ek"
   role: "Former executive-team colleague, American Marketing Association"
   level: "Executive"
 - quote: "Jennifer is the best boss I've ever had. She is a dynamic leader who can communicate clearly and believes in the value team members bring to the collective whole."
+  group: 1
   name: "Jared Bodily"
   role: "Executive Director of Technology; direct report at ThomasArts"
   level: "Team"
 - quote: "Her strategic mindset, customer orientation, collaborative spirit and inspiring work ethic have made AMA better every day."
+  group: 1
   name: "Stacy Armijo"
   role: "Board leader and Chief Experience Officer"
   level: "Board"
-
+- quote: "I've never seen a talent like Jennifer; concept, art direction, copy, design, the whole 9. Jennifer can do it all and will do it all, just watch her."
+  group: 2
+  name: "Dave Kissel"
+  role: "SVP, DDB; strategic advisor and former CEO, InStadium"
+  level: "Executive"
+- quote: "Within days she had her sleeves rolled up, had learned the nuances of our business and was working with us to map and visually diagram solutions to a complex set of customer journey problems."
+  group: 2
+  name: "David Beasley"
+  role: "Allstate Roadside Services"
+  level: "Partner"
+- quote: "Jennifer is a powerful addition to a product team because she is able to lead the product design process, beginning with observation, analysis and diagnosis, through design exploration, and she follows up by managing implementation."
+  group: 2
+  name: "Robert Tercek"
+  role: "Author of Vaporized; Chairman, Creative Visions Foundation"
+  level: "Executive"
+- quote: "Jennifer possesses a rare and unique combination of abilities that would have a positive impact on any organization. She has an extremely sharp mind for all things technological, but is also a tremendous leader."
+  group: 2
+  name: "Kyle Head"
+  role: "Director of People & Culture, Integrity"
+  level: "Peer"
+- quote: "Jennifer led the design, implementation, and adoption of technology solutions that greatly enhanced agency efficiency, improved profitability, and elevated our financial reporting capabilities."
+  group: 3
+  name: "Ashley Bloxham"
+  role: "Executive Leader in Healthcare Growth, CX & Operations"
+  level: "Executive"
+- quote: "Ever the consummate professional, with a keen eye on design, her role and guidance provided stability, resourcefulness, creativity and calm to our organizational digital transformation projects."
+  group: 3
+  name: "Charles Wiggins"
+  role: "Global CIO / CTO & Founder / CEO"
+  level: "Executive"
+- quote: "Jennifer is a player coach who enjoys the trust and loyalty of the teams she leads because she herself is a trusting and empowering leader."
+  group: 3
+  name: "Russ Klein"
+  role: "Former manager and executive leader"
+  level: "Executive"
+- quote: "From initial design through implementation, she manages to be both pragmatic and still raise the bar to deliver digital experiences that are intuitive and human."
+  group: 3
+  name: "Lisa Jillson"
+  role: "Vice President, Performance Marketing Supply, Arity"
+  level: "Executive"

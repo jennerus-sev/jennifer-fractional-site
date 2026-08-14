@@ -1,10 +1,8 @@
 {{ define "main" }}
 <main id="main">
-  <div class="journey-dot" aria-hidden="true"></div>
-
   <section class="hero section-pad" id="top" data-waypoint="teal">
     <div class="dot-field" aria-hidden="true">
-      {{ range seq 52 }}<i></i>{{ end }}
+      {{ range seq 26 }}<i></i>{{ end }}
     </div>
     <div class="hero-copy reveal">
       <h1>The hardest problems rarely belong to one department<span>.</span></h1>
@@ -15,27 +13,30 @@
       </div>
     </div>
     <div class="hero-orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hero-dotted-path" aria-hidden="true">{{ range seq 21 }}<i></i>{{ end }}</div>
     <div class="route route-hero" aria-hidden="true">{{ range seq 7 }}<i></i>{{ end }}</div>
   </section>
 
   <section class="bridge section-pad" id="help">
-    <div class="bridge-title reveal"><h2>Bridging what doesn’t always work together.</h2></div>
+    <div class="bridge-title reveal" data-reveal="left"><h2>Bridging what doesn’t always work together.</h2></div>
     <div class="bridge-items">
-      <article class="capability reveal"><div class="mini-icon customer"><i></i><i></i></div><h3>Customer<br>Experience</h3><p>Creating clarity in the moments that matter.</p></article>
-      <article class="capability reveal"><div class="mini-icon operations"><i></i><i></i><i></i></div><h3>Operations</h3><p>Simplifying systems and driving flow.</p></article>
-      <article class="capability reveal"><div class="mini-icon technology"><i></i></div><h3>Technology</h3><p>Aligning tools to enable outcomes.</p></article>
-      <article class="capability reveal"><div class="mini-icon people"><i></i><i></i><i></i></div><h3>People</h3><p>Building trust, alignment, and momentum.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:0ms"><div class="mini-icon customer"><i></i><i></i></div><h3>Customer<br>Experience</h3><p>Creating clarity in the moments that matter.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:90ms"><div class="mini-icon operations"><i></i><i></i><i></i></div><h3>Operations</h3><p>Simplifying systems and driving flow.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:180ms"><div class="mini-icon technology"><i></i><i></i></div><h3>Technology</h3><p>Aligning tools to enable outcomes.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:270ms"><div class="mini-icon people"><i></i><i></i><i></i><i></i></div><h3>People</h3><p>Building trust, alignment, and momentum.</p></article>
     </div>
   </section>
 
   <section class="transformation section-pad" data-waypoint="orange">
+    <div class="transformation-rails" aria-hidden="true"></div>
+    <div class="transformation-imprint" aria-hidden="true"><span class="imprint-icon system-map"><i></i><i></i><i></i><i></i></span></div>
     <div class="route route-mid route-mid-a" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
-    <article class="transformation-intro reveal">
-      <p class="number">01</p><h2>A fractional partner for transformation that sticks.</h2>
-      <p>I partner with leadership teams to solve complex challenges at the intersections—where strategy meets execution and change becomes real.</p>
+    <article class="transformation-intro reveal" data-reveal="left">
+      <span class="section-check" aria-label="Section complete"></span><h2>A fractional partner for transformation that sticks.</h2>
+      <p>I partner with leadership teams to solve complex challenges at the intersections where strategy meets execution and change becomes real.</p>
     </article>
-    <div class="transform-mark reveal" aria-hidden="true"><div><i></i><i></i></div><span></span><span></span><span></span></div>
-    <div class="principles">
+    <div class="transform-mark" aria-hidden="true"><div class="transform-ball"></div></div>
+    <div class="principles reveal" data-reveal="right" style="--delay:110ms">
       <article class="reveal"><i></i><div><h3>See the whole system</h3><p>I bring structure to complexity and identify the levers that create lasting impact.</p></div></article>
       <article class="reveal"><i></i><div><h3>Align around what matters</h3><p>I help teams move from misalignment to shared clarity and decisive action.</p></div></article>
       <article class="reveal"><i></i><div><h3>Deliver measurable outcomes</h3><p>I focus on results that improve experiences, strengthen operations, and drive growth.</p></div></article>
@@ -43,31 +44,34 @@
   </section>
 
   <section class="impact section-pad" data-waypoint="peach">
-    <div class="impact-copy reveal"><p class="number">02</p><h2>Impact that compounds.</h2><p>The best transformations don’t just solve today’s problems—they build the capability to adapt, evolve, and lead tomorrow.</p></div>
+    <div class="impact-copy reveal" data-reveal="left"><span class="section-check" aria-label="Section complete"></span><h2>Impact that compounds.</h2><p>The best transformations don’t just solve today’s problems, they build the capability to adapt, evolve, and lead tomorrow.</p></div>
     <div class="impact-items">
-      <article class="reveal"><div class="impact-icon rings"></div><h3>Stronger<br>Experiences</h3><p>Designing journeys that drive loyalty and growth.</p></article>
-      <article class="reveal"><div class="impact-icon dots"><i></i><i></i><i></i></div><h3>More Efficient<br>Operations</h3><p>Building systems that scale with confidence.</p></article>
-      <article class="reveal"><div class="impact-icon flower"><i></i><i></i><i></i><i></i></div><h3>Healthier<br>Organizations</h3><p>Empowering people and sustaining change.</p></article>
+      <article class="reveal" data-reveal="left" style="--delay:0ms"><div class="impact-icon rings"></div><h3>Stronger<br>Experiences</h3><p>Designing journeys that drive loyalty and growth.</p></article>
+      <article class="reveal" data-reveal="left" style="--delay:90ms"><div class="impact-icon dots"><i></i><i></i><i></i></div><h3>More Efficient<br>Operations</h3><p>Building systems that scale with confidence.</p></article>
+      <article class="reveal" data-reveal="left" style="--delay:180ms"><div class="impact-icon flower"><i></i><i></i><i></i><i></i></div><h3>Healthier<br>Organizations</h3><p>Empowering people and sustaining change.</p></article>
     </div>
     <div class="route route-mid route-mid-b" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
   </section>
 
   <section class="when section-pad" id="when">
-    <header class="reveal"><h2>When to call me</h2></header>
+    <header class="reveal" data-reveal="up"><p class="eyebrow when-eyebrow">How I can help</p><h2>When to call me</h2></header>
     <div class="scenario-grid">
-      {{ range site.Data.scenarios }}
-      <article class="scenario-card reveal"><span>+</span><h3>{{ .title }}</h3><p>{{ .body }}</p></article>
+      {{ range $i, $scenario := site.Data.scenarios }}
+      <a class="scenario-card reveal" data-reveal="up" style="--delay:{{ mul (mod $i 3) 75 }}ms" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6"><span class="phone-icon" aria-hidden="true">+</span><h3>{{ $scenario.title }}</h3><p>{{ $scenario.body }}</p><span class="scenario-cta">Schedule a call <i aria-hidden="true"></i></span></a>
       {{ end }}
     </div>
     <div class="route route-dark" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
   </section>
 
   <section class="offers section-pad" id="services" data-waypoint="teal">
+    <div class="offers-rails" aria-hidden="true"></div>
+    <div class="offers-imprint" aria-hidden="true"><span class="imprint-icon radiate"><i></i><i></i><i></i><i></i></span></div>
+    <div class="offers-ball-wrap" aria-hidden="true"><div class="offers-ball"></div></div>
     <div class="route route-offers" aria-hidden="true">{{ range seq 6 }}<i></i>{{ end }}</div>
-    <header class="offer-heading reveal"><h2>Ways we can<br>work together</h2><div><h3>Senior help, shaped to the moment.</h3><p>Every engagement starts with a real problem and a clear definition of what better looks like. These structures make the investment visible from the start.</p></div></header>
+    <header class="offer-heading"><h2 class="reveal" data-reveal="left">Ways we can<br>work together</h2><div class="offer-path-space" aria-hidden="true"></div><div class="reveal" data-reveal="right"><h3>Senior-level help, shaped to the moment.</h3><p>Every engagement starts with a real problem and a clear definition of what better looks like. These structures make the investment visible from the start.</p></div></header>
     <div class="offer-list">
       {{ range $i, $offer := site.Data.offers }}
-      <article class="offer-row reveal">
+      <article class="offer-row reveal" data-reveal="left" style="--delay:{{ mul $i 100 }}ms">
         <div class="offer-title"><span>0{{ add $i 1 }} &nbsp; {{ $offer.label }}</span><h3>{{ $offer.name }}</h3><p>{{ $offer.description }}</p></div>
         <strong>{{ $offer.price }}</strong>
         <div><ul>{{ range $offer.includes }}<li>{{ . }}</li>{{ end }}</ul><p class="offer-note">{{ $offer.note }}</p></div>
@@ -78,11 +82,12 @@
 
   <section class="work section-pad" id="work">
     <div class="work-route" aria-hidden="true">{{ range seq 7 }}<i></i>{{ end }}</div>
-    <header class="work-heading reveal"><h2>Selected Work</h2><p>A few examples of work across operations, experience, organizational change, and digital scale.</p></header>
+    <div class="work-ball-wrap" aria-hidden="true"><div class="work-ball"></div></div>
+    <header class="work-heading reveal" data-reveal="left"><h2>Selected Work</h2><p>A few examples of work across operations, experience, organizational change, and digital scale.</p></header>
     <div class="case-list">
       {{ range $i, $case := site.Data.cases }}
       <article class="case-row reveal" data-waypoint="{{ .color }}">
-        <div class="case-copy">
+        <div class="case-copy reveal" data-reveal="left">
           <p class="case-org">{{ .organization }}</p><p class="case-category">{{ .category }}</p>
           <h3>{{ .title }}</h3><p>{{ .summary }}</p>
           <div class="metrics">{{ range .metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
@@ -95,24 +100,30 @@
 
   <section class="proof section-pad" data-waypoint="orange">
     <div class="proof-route" aria-hidden="true">{{ range seq 6 }}<i></i>{{ end }}</div>
-    <div class="proof-mark reveal" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    <header class="proof-heading reveal"><h2>What people say</h2><p>Trusted up, down, and across the organization.</p></header>
-    <div class="quote-grid">
-      {{ range site.Data.testimonials }}
-      <figure class="quote-card reveal"><span>{{ .level }}</span><blockquote>“{{ .quote }}”</blockquote><figcaption><strong>{{ .name }}</strong><small>{{ .role }}</small></figcaption></figure>
-      {{ end }}
+    <div class="portrait-rails" aria-hidden="true"></div>
+    <div class="portrait-ball-wrap" aria-hidden="true"><div class="portrait-ball"></div></div>
+    <header class="proof-heading reveal" data-reveal="left"><h2>What people say</h2><p>Trusted up, down, and across the organization.</p></header>
+    <div class="testimonial-carousel reveal" data-reveal="up" aria-label="Testimonials">
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous testimonials">←</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          {{ range $slide := seq 3 }}<div class="quote-grid carousel-slide">{{ range where site.Data.testimonials "group" $slide }}<figure class="quote-card"><span>{{ .level }}</span><blockquote>“{{ .quote }}”</blockquote><figcaption><strong>{{ .name }}</strong><small>{{ .role }}</small></figcaption></figure>{{ end }}</div>{{ end }}
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Next testimonials">→</button>
+      <div class="carousel-dots" role="group" aria-label="Choose testimonial group">{{ range $i := seq 3 }}<button type="button" aria-label="Show testimonial group {{ $i }}" data-slide="{{ sub $i 1 }}"></button>{{ end }}</div>
     </div>
   </section>
 
   <section class="about section-pad" id="about" data-waypoint="teal">
     <div class="about-route" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
-    <div class="about-copy reveal"><p class="eyebrow">About Jennifer</p><h2>A creative executive who can move from the boardroom to the workflow.</h2><p>I have spent more than 25 years helping organizations navigate complex change. My work spans executive leadership, experience and service design, digital transformation, operations, brand systems, data, and emerging technology. I have led multidisciplinary teams and enterprise programs for organizations including UCLA Health, the American Marketing Association, Allstate, and Harpo Productions.</p><p>Based in Chicago. I hold an M.S. in Information Design &amp; Strategy from Northwestern University and a B.F.A. in Graphic Design from the University of Tennessee.</p></div>
-    <figure class="portrait reveal"><span aria-hidden="true"></span><img src="{{ "images/about/jennifer-severns.jpg" | relURL }}" alt="Jennifer Severns" loading="lazy"></figure>
+    <div class="about-copy reveal" data-reveal="left"><p class="eyebrow">About Jennifer</p><h2>A creative executive who can move from the boardroom to the workflow.</h2><p>I have spent more than 25 years helping organizations navigate complex change. My work spans executive leadership, experience and service design, digital transformation, operations, brand systems, data, and emerging technology. I have led multidisciplinary teams and enterprise programs for organizations including UCLA Health, the American Marketing Association, Allstate, and Harpo Productions.</p><p>Based in Chicago. I hold an M.S. in Information Design &amp; Strategy from Northwestern University and a B.F.A. in Graphic Design from the University of Tennessee.</p></div>
+    <figure class="portrait"><span aria-hidden="true"></span><img src="{{ "images/about/jennifer-severns.jpg" | relURL }}" alt="Jennifer Severns" loading="lazy"></figure>
   </section>
 
   <section class="contact section-pad" id="contact" data-waypoint="orange">
-    <div class="contact-lead reveal"><h2>Take the first step with no commitment, no cost</h2></div>
-    <div class="contact-copy reveal"><h3>Two conversations to see if we fit.</h3><p>The first call is up to 60 minutes and focused on your situation. I will listen, ask questions, and identify what may be underneath the visible problem. If there is enough substance to be helpful, we will schedule a second complimentary call where I bring back an initial framework, possible paths, and an honest view of whether I am the right partner.</p><a class="button button-primary" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6">Schedule our first call <span>→</span></a><small>Both conversations are complimentary. No obligation.</small></div>
+    <div class="contact-lead reveal" data-reveal="left"><h2>Take the first step with no commitment, no cost</h2></div>
+    <div class="contact-copy reveal" data-reveal="left" style="--delay:110ms"><h3>Two conversations to see if we fit.</h3><p>The first call is up to 60 minutes and focused on your situation. I will listen, ask questions, and identify what may be underneath the visible problem. If there is enough substance to be helpful, we will schedule a second complimentary call where I bring back an initial framework, possible paths, and an honest view of whether I am the right partner.</p><a class="button button-primary" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6">Schedule our first call <span>→</span></a><small>Both conversations are complimentary. No obligation.</small></div>
   </section>
 </main>
 {{ end }}
