@@ -1,124 +1,157 @@
 {{ define "main" }}
-{{ range seq 26 }}{{ end }}
-The hardest problems rarely belong to one department.
-I help organizations connect customer experience, operations, technology, and people, and then turn that clarity into a way of working that lasts.
-Letâ€™s connect â†’ Schedule a free callâ†’
+<main id="main">
+  <section class="hero section-pad" id="top" data-waypoint="teal">
+    <div class="dot-field" aria-hidden="true">
+      {{ range seq 26 }}<i></i>{{ end }}
+    </div>
+    <div class="hero-copy reveal">
+      <h1>The hardest problems rarely belong to one department<span>.</span></h1>
+      <p>I help organizations connect customer experience, operations, technology, and people, and then turn that clarity into a way of working that lasts.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#contact">Let’s connect <span>→</span></a>
+        <a class="text-link" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6"><span class="link-label">Schedule a free call</span><span class="link-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="hero-orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hero-dotted-path" aria-hidden="true">{{ range seq 21 }}<i></i>{{ end }}</div>
+    <div class="route route-hero" aria-hidden="true">{{ range seq 7 }}<i></i>{{ end }}</div>
+  </section>
 
-{{ range seq 21 }}{{ end }}
-{{ range seq 7 }}{{ end }}
-Bridging what doesnâ€™t always work together.
+  <section class="bridge section-pad" id="help">
+    <div class="bridge-title reveal" data-reveal="left"><h2>Bridging what doesn’t always work together.</h2></div>
+    <div class="bridge-items">
+      <article class="capability reveal" data-reveal="left" style="--delay:0ms"><div class="mini-icon customer"><i></i><i></i></div><h3>Customer<br>Experience</h3><p>Creating clarity in the moments that matter.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:90ms"><div class="mini-icon operations"><i></i><i></i><i></i></div><h3>Operations</h3><p>Simplifying systems and driving flow.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:180ms"><div class="mini-icon technology"><i></i><i></i></div><h3>Technology</h3><p>Aligning tools to enable outcomes.</p></article>
+      <article class="capability reveal" data-reveal="left" style="--delay:270ms"><div class="mini-icon people"><i></i><i></i><i></i><i></i></div><h3>People</h3><p>Building trust, alignment, and momentum.</p></article>
+    </div>
+  </section>
 
-Customer Experience
-Creating clarity in the moments that matter.
+  <section class="transformation section-pad" data-waypoint="orange">
+    <div class="transformation-rails" aria-hidden="true"></div>
+    <div class="transformation-imprint" aria-hidden="true"><span class="imprint-icon system-map"><i></i><i></i><i></i><i></i></span></div>
+    <div class="route route-mid route-mid-a" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
+    <article class="transformation-intro reveal" data-reveal="left">
+      <span class="section-check" aria-label="Section complete"></span><h2>A fractional partner for transformation that sticks.</h2>
+      <p>I partner with leadership teams to solve complex challenges at the intersections where strategy meets execution and change becomes real.</p>
+    </article>
+    <div class="transform-mark" aria-hidden="true"><div class="transform-ball"></div></div>
+    <div class="principles reveal" data-reveal="right" style="--delay:110ms">
+      <article class="reveal"><i></i><div><h3>See the whole system</h3><p>I bring structure to complexity and identify the levers that create lasting impact.</p></div></article>
+      <article class="reveal"><i></i><div><h3>Align around what matters</h3><p>I help teams move from misalignment to shared clarity and decisive action.</p></div></article>
+      <article class="reveal"><i></i><div><h3>Deliver measurable outcomes</h3><p>I focus on results that improve experiences, strengthen operations, and drive growth.</p></div></article>
+    </div>
+  </section>
 
-Operations
-Simplifying systems and driving flow.
+  <section class="impact section-pad" data-waypoint="peach">
+    <div class="impact-copy reveal" data-reveal="left"><span class="section-check" aria-label="Section complete"></span><h2>Impact that compounds.</h2><p>The best transformations don’t just solve today’s problems, they build the capability to adapt, evolve, and lead tomorrow.</p></div>
+    <div class="impact-items">
+      <article class="reveal" data-reveal="left" style="--delay:0ms"><div class="impact-icon rings"></div><h3>Stronger<br>Experiences</h3><p>Designing journeys that drive loyalty and growth.</p></article>
+      <article class="reveal" data-reveal="left" style="--delay:90ms"><div class="impact-icon dots"><i></i><i></i><i></i></div><h3>More Efficient<br>Operations</h3><p>Building systems that scale with confidence.</p></article>
+      <article class="reveal" data-reveal="left" style="--delay:180ms"><div class="impact-icon flower"><i></i><i></i><i></i><i></i></div><h3>Healthier<br>Organizations</h3><p>Empowering people and sustaining change.</p></article>
+    </div>
+    <div class="route route-mid route-mid-b" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
+  </section>
 
-Technology
-Aligning tools to enable outcomes.
+  <section class="when section-pad" id="when">
+    <header class="reveal" data-reveal="up"><p class="eyebrow when-eyebrow">How I can help</p><h2>When to call me</h2></header>
+    <div class="scenario-grid">
+      {{ range $i, $scenario := site.Data.scenarios }}
+      <a class="scenario-card reveal" data-reveal="up" style="--delay:{{ mul (mod $i 3) 75 }}ms" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6"><span class="phone-icon" aria-hidden="true">+</span><h3>{{ $scenario.title }}</h3><p>{{ $scenario.body }}</p><span class="scenario-cta">Schedule a call <i aria-hidden="true"></i></span></a>
+      {{ end }}
+    </div>
+    <div class="route route-dark" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
+  </section>
 
-People
-Building trust, alignment, and momentum.
+  <section class="offers section-pad" id="services" data-waypoint="teal">
+    <div class="offers-rails" aria-hidden="true"></div>
+    <div class="offers-imprint" aria-hidden="true"><span class="imprint-icon radiate"><i></i><i></i><i></i><i></i></span></div>
+    <div class="offers-ball-wrap" aria-hidden="true"><div class="offers-ball"></div></div>
+    <div class="route route-offers" aria-hidden="true">{{ range seq 6 }}<i></i>{{ end }}</div>
+    <header class="offer-heading"><h2 class="reveal" data-reveal="left">Ways we can<br>work together</h2><div class="offer-path-space" aria-hidden="true"></div><div class="reveal" data-reveal="right"><h3>Senior-level help, shaped to the moment.</h3><p>Every engagement starts with a real problem and a clear definition of what better looks like. These structures make the investment visible from the start.</p></div></header>
+    <div class="offer-list">
+      {{ range $i, $offer := site.Data.offers }}
+      <article class="offer-row reveal" data-reveal="left" style="--delay:{{ mul $i 100 }}ms">
+        <div class="offer-title"><span>0{{ add $i 1 }} &nbsp; {{ $offer.label }}</span><h3>{{ $offer.name }}</h3><p>{{ $offer.description }}</p></div>
+        <strong>{{ $offer.price }}</strong>
+        <div><ul>{{ range $offer.includes }}<li>{{ . }}</li>{{ end }}</ul><p class="offer-note">{{ $offer.note }}</p></div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
 
+  <section class="work section-pad" id="work">
+    <div class="work-route" aria-hidden="true">{{ range seq 7 }}<i></i>{{ end }}</div>
+    <div class="work-ball-wrap" aria-hidden="true"><div class="work-ball"></div></div>
+    <header class="work-heading reveal" data-reveal="left"><h2>Selected Work</h2><p>A few examples of work across operations, experience, organizational change, and digital scale.</p></header>
+    <div class="case-list">
+      {{ range $i, $case := site.Data.cases }}
+      <article class="case-row reveal" data-waypoint="{{ .color }}">
+        <div class="case-copy reveal" data-reveal="left">
+          <p class="case-org">{{ .organization }}</p><p class="case-category">{{ .category }}</p>
+          <h3>{{ .title }}</h3><p>{{ .summary }}</p>
+          <div class="metrics">{{ range .metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+        </div>
+        <figure class="case-image {{ .color }}"><img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy"></figure>
+      </article>
+      {{ end }}
+    </div>
+  </section>
 
-{{ range seq 5 }}{{ end }}
-A fractional partner for transformation that sticks.
-I partner with leadership teams to solve complex challenges at the intersections where strategy meets execution and change becomes real.
+  <section class="proof section-pad" data-waypoint="orange">
+    <div class="proof-route" aria-hidden="true">{{ range seq 6 }}<i></i>{{ end }}</div>
+    <div class="portrait-rails" aria-hidden="true"></div>
+    <div class="portrait-ball-wrap" aria-hidden="true"><div class="portrait-ball"></div></div>
+    <header class="proof-heading reveal" data-reveal="left"><h2>What people say</h2><p>Trusted up, down, and across the organization.</p></header>
+    <div class="testimonial-carousel reveal" data-reveal="up" aria-label="Testimonials">
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous testimonials">←</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          {{ range $slide := seq 3 }}<div class="quote-grid carousel-slide">{{ range where site.Data.testimonials "group" $slide }}<figure class="quote-card"><span>{{ .level }}</span><blockquote>“{{ .quote }}”</blockquote><figcaption><strong>{{ .name }}</strong><small>{{ .role }}</small></figcaption></figure>{{ end }}</div>{{ end }}
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Next testimonials">→</button>
+      <div class="carousel-dots" role="group" aria-label="Choose testimonial group">{{ range $i := seq 3 }}<button type="button" aria-label="Show testimonial group {{ $i }}" data-slide="{{ sub $i 1 }}"></button>{{ end }}</div>
+    </div>
+  </section>
 
-See the whole system
-I bring structure to complexity and identify the levers that create lasting impact.
-Align around what matters
-I help teams move from misalignment to shared clarity and decisive action.
-Deliver measurable outcomes
-I focus on results that improve experiences, strengthen operations, and drive growth.
-Impact that compounds.
-The best transformations donâ€™t just solve todayâ€™s problems, they build the capability to adapt, evolve, and lead tomorrow.
+  <section class="about section-pad" id="about" data-waypoint="teal">
+    <div class="about-route" aria-hidden="true">{{ range seq 5 }}<i></i>{{ end }}</div>
+    <div class="about-copy reveal" data-reveal="left">
+      <p class="eyebrow">About Jennifer</p>
+      <h2>A creative executive who can move from the boardroom to the workflow.</h2>
+      <p class="about-intro">For more than 25 years, I have helped organizations navigate complex change at the intersection of experience, operations, technology, and people. Across these roles, the through line is the same: making complex systems clearer, more human, and more capable of delivering results.</p>
+      <p class="about-education">I am based in Chicago, and I hold an M.S. in Information Design &amp; Strategy from Northwestern University and a B.F.A. in Graphic Design from the University of Tennessee.</p>
+    </div>
+    <figure class="portrait"><span aria-hidden="true"></span><img src="{{ "images/about/jennifer-severns.jpg" | relURL }}" alt="Jennifer Severns" loading="lazy"></figure>
+    <div class="career-history">
+        <section class="career-group">
+          <h3>Fractional &amp; advisory leadership</h3>
+          <ul>
+            <li><strong>Chief Member Experience Officer</strong><span>Healthtech Benefits Solutions, LLC</span></li>
+            <li><strong>Experience Design Leader</strong><span>Confidential finance and investment advisory firm</span></li>
+            <li><strong>Human-Centered Design Consultant</strong><span>UCLA Health</span></li>
+            <li><strong>Content Strategy &amp; Innovation Lead</strong><span>Allstate</span></li>
+            <li><strong>President-Elect</strong><span>AMA Chicago · Fractional association leadership</span></li>
+            <li><strong>Fractional Creative Director</strong><span>Agency and independent creative teams</span></li>
+          </ul>
+        </section>
+        <section class="career-group">
+          <h3>Executive leadership</h3>
+          <ul>
+            <li><strong>Chief Experience Officer</strong><span>ThomasArts</span></li>
+            <li><strong>Chief Experience Officer</strong><span>American Marketing Association</span></li>
+            <li><strong>VP, Creative Director</strong><span>Zócalo Group</span></li>
+            <li><strong>Design Director</strong><span>Harpo Productions · Oprah</span></li>
+          </ul>
+        </section>
+    </div>
+    <p class="selected-clients"><strong>Selected clients</strong> U.S. Air Force, HBO, Walgreens, 20th Television, Dell, Unilever, Nissan, Aetna, VSP, Guardian Health, and AARP.</p>
+  </section>
 
-Stronger Experiences
-Designing journeys that drive loyalty and growth.
-
-More Efficient Operations
-Building systems that scale with confidence.
-
-Healthier Organizations
-Empowering people and sustaining change.
-{{ range seq 5 }}{{ end }}
-How I can help
-When to call me
-{{ range $i, $scenario := site.Data.scenarios }} +
-{{ $scenario.title }}
-{{ $scenario.body }}
-Schedule a call {{ end }}
-{{ range seq 5 }}{{ end }}
-
-
-
-{{ range seq 6 }}{{ end }}
-Ways we can work together
-
-Senior-level help, shaped to the moment.
-Every engagement starts with a real problem and a clear definition of what better looks like. These structures make the investment visible from the start.
-{{ range $i, $offer := site.Data.offers }}
-0{{ add $i 1 }}   {{ $offer.label }}
-{{ $offer.name }}
-{{ $offer.description }}
-{{ $offer.price }}
-	•	{{ range $offer.includes }}
-	•	{{ . }}
-	•	{{ end }}
-{{ $offer.note }}
-{{ end }}
-{{ range seq 7 }}{{ end }}
-
-Selected Work
-A few examples of work across operations, experience, organizational change, and digital scale.
-{{ range $i, $case := site.Data.cases }}
-{{ .organization }}
-{{ .category }}
-{{ .title }}
-{{ .summary }}
-{{ range .metrics }}
-{{ .value }}{{ .label }}
-{{ end }}
-￼
-{{ end }}
-{{ range seq 6 }}{{ end }}
-
-
-What people say
-Trusted up, down, and across the organization.
-â†
-{{ range $slide := seq 3 }}
-{{ range where site.Data.testimonials "group" $slide }}
-{{ .level }}
-â€œ{{ .quote }}â€
-{{ .name }}{{ .role }}
-{{ end }}
-{{ end }}
-â†’
-{{ range $i := seq 3 }}{{ end }}
-{{ range seq 5 }}{{ end }}
-About Jennifer
-A creative executive who can move from the boardroom to the workflow.
-For more than 25 years, I have helped organizations navigate complex change at the intersection of experience, operations, technology, and people. Across these roles, the through line is the same: making complex systems clearer, more human, and more capable of delivering results.
-I am based in Chicago, and I hold an M.S. in Information Design & Strategy from Northwestern University and a B.F.A. in Graphic Design from the University of Tennessee.
-￼
-Fractional & advisory leadership
-	•	Chief Member Experience OfficerHealthtech Benefits Solutions, LLC
-	•	Experience Design LeaderConfidential finance and investment advisory firm
-	•	Human-Centered Design ConsultantUCLA Health
-	•	Content Strategy & Innovation LeadAllstate
-	•	President-ElectAMA Chicago Â· Fractional association leadership
-	•	Fractional Creative DirectorAgency and independent creative teams
-Executive leadership
-	•	Chief Experience OfficerThomasArts
-	•	Chief Experience OfficerAmerican Marketing Association
-	•	VP, Creative DirectorZÃ³calo Group
-	•	Design DirectorHarpo Productions Â· Oprah
-Selected clients U.S. Air Force, HBO, Walgreens, 20th Television, Dell, Unilever, Nissan, Aetna, VSP, Guardian Health, and AARP.
-Take the first step with no commitment, no cost
-{{ range seq 13 }}{{ end }}
-Two conversations to see if we fit.
-The first call is up to 60 minutes and focused on your situation. I will listen, ask questions, and identify what may be underneath the visible problem. If there is enough substance to be helpful, we will schedule a second complimentary call where I bring back an initial framework, possible paths, and an honest view of whether I am the right partner.
-Schedule our first call â†’Both conversations are complimentary. No obligation.
+  <section class="contact section-pad" id="contact" data-waypoint="orange">
+    <div class="contact-lead reveal" data-reveal="left"><h2>Take the first step with no commitment, no cost</h2><div class="contact-dot-row" aria-hidden="true">{{ range seq 13 }}<i></i>{{ end }}</div></div>
+    <div class="contact-copy reveal" data-reveal="left" style="--delay:110ms"><h3>Two conversations to see if we fit.</h3><p>The first call is up to 60 minutes and focused on your situation. I will listen, ask questions, and identify what may be underneath the visible problem. If there is enough substance to be helpful, we will schedule a second complimentary call where I bring back an initial framework, possible paths, and an honest view of whether I am the right partner.</p><a class="button button-primary" href="https://calendar.app.google/QNTBA6LqdUpg2GdK6">Schedule our first call <span>→</span></a><small>Both conversations are complimentary. No obligation.</small></div>
+  </section>
+</main>
 {{ end }}
