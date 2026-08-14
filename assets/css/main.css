@@ -111,7 +111,7 @@
 .hero h1{line-height:.94}
 .bridge{display:block;text-align:center}.bridge-title h2{max-width:none;margin:0 auto 34px}.bridge-items{max-width:760px;margin:0 auto;align-items:start}
 .hero-actions .button{min-width:0;padding-right:14px}
-.text-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none}.text-link span,.footer-link span{display:inline-block;transition:transform .28s ease}.text-link:hover span,.text-link:focus-visible span,.footer-link:hover span,.footer-link:focus-visible span{transform:translateX(5px)}
+.text-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none}.text-link .link-arrow{display:inline-block;transition:transform .28s ease}.text-link:hover .link-arrow,.text-link:focus-visible .link-arrow{transform:translateX(5px)}
 .footer-link{display:inline-flex;align-items:center;gap:6px}
 
 @media(max-width:900px){
@@ -258,3 +258,12 @@ section[id]{scroll-margin-top:68px}
 .contact-copy .button-primary{color:#fff}
 .contact-dot-row{display:grid;grid-template-columns:repeat(13,10px);justify-content:space-between;width:100%;margin-top:34px}.contact-dot-row i{display:block;width:10px;height:10px;border-radius:50%;background:var(--teal);transition:background-color .5s ease}
 @media(max-width:680px){.contact-dot-row{max-width:330px;margin-top:26px}}
+
+/* Local rollover option for primary navigation. */
+.site-nav a:not(.nav-cta){position:relative;transition:color .22s ease}.site-nav a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.22,.7,.25,1)}.site-nav a:not(.nav-cta):hover,.site-nav a:not(.nav-cta):focus-visible{color:#fff}.site-nav a:not(.nav-cta):hover::after,.site-nav a:not(.nav-cta):focus-visible::after{transform:scaleX(1)}
+.site-nav .nav-cta{transition:color .22s ease,background-color .22s ease,border-color .22s ease,transform .22s ease}.site-nav .nav-cta:hover,.site-nav .nav-cta:focus-visible{color:#fff;background:var(--orange);border-color:var(--orange);transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){.site-nav a,.site-nav a::after{transition:none!important}}
+
+.text-link .link-label{position:relative}.text-link .link-label::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.22,.7,.25,1)}.text-link:hover .link-label::after,.text-link:focus-visible .link-label::after{transform:scaleX(1)}
+.site-footer .footer-link{text-decoration-line:underline;text-decoration-color:rgba(255,255,255,.7);transition:text-decoration-color .22s ease}.site-footer .footer-link:hover,.site-footer .footer-link:focus-visible{text-decoration-color:var(--orange)}
+@media(prefers-reduced-motion:reduce){.text-link .link-label::after,.site-footer .footer-link{transition:none}}
