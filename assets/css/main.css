@@ -249,3 +249,12 @@ section[id]{scroll-margin-top:68px}
 /* Customer Experience: a simple curved barbell. */
 .mini-icon.customer::before{top:14px;left:7px;width:44px;height:18px;border:0;border-top:4px solid var(--teal);border-radius:50%;transform:rotate(10deg)}
 .mini-icon.customer i{top:12px;left:4px;width:9px;height:9px}.mini-icon.customer i+i{top:20px;left:47px;width:9px;height:9px}
+
+/* Local design test: peach closing CTA, footer remains dark gray. */
+.contact{background:var(--blush);color:var(--ink)}
+.contact-lead h2{color:var(--ink)}
+.contact-copy p{color:rgba(17,17,15,.78)}
+.contact-copy small{color:rgba(17,17,15,.6)}
+.contact-copy .button-primary{color:#fff}
+.contact-dot-row{display:grid;grid-template-columns:repeat(13,10px);justify-content:space-between;width:100%;margin-top:34px}.contact-dot-row i{display:block;width:10px;height:10px;border-radius:50%;background:var(--teal);transition:background-color .5s ease}
+@media(max-width:680px){.contact-dot-row{max-width:330px;margin-top:26px}}

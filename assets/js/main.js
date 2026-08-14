@@ -103,7 +103,7 @@ if (!reducedMotion) {
 }
 if (!reducedMotion) {
   const dotColors = ['#367d79', '#efa27e', '#f04d32'];
-  document.querySelectorAll('.dot-field i').forEach((dot) => {
+  document.querySelectorAll('.dot-field i, .contact-dot-row i').forEach((dot) => {
     let current = dotColors[Math.floor(Math.random() * dotColors.length)];
     dot.style.backgroundColor = current;
     const changeColor = () => {
