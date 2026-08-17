@@ -281,7 +281,7 @@ section[id]{scroll-margin-top:68px}
 .about-intro,.about-education,.selected-clients{max-width:650px}.about-education{font-size:12px!important;line-height:1.55;margin-bottom:28px}.wordmark small{font-size:13px}
 
 /* About: portrait beside the introduction; career history spans the page. */
-.about .about-copy{padding-right:0}.about{column-gap:38px;row-gap:20px}.about .portrait{align-self:start;margin-top:18px}.about .career-history,.about>.selected-clients{grid-column:1/-1;width:100%}.about .career-history{grid-template-columns:1fr 1fr;margin:0}.about>.selected-clients{max-width:none;margin:0}
+.about .about-copy{padding-right:0}.about{column-gap:38px;row-gap:20px}.about .portrait{align-self:start;margin-top:18px}.about .career-history,.about>.selected-clients{grid-column:1/-1;width:100%}.about .career-history{grid-template-columns:repeat(3,minmax(0,1fr));margin:0}.about>.selected-clients{max-width:none;margin:0}
 @media(max-width:900px){.about .portrait{margin-top:18px}.about .career-history{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.about .portrait{grid-row:auto;margin:0 auto}.about .career-history{grid-template-columns:1fr;gap:24px}}
 
