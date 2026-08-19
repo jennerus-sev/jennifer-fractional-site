@@ -187,16 +187,18 @@ section[id]{scroll-margin-top:68px}
 .work .work-route i{display:none}
 .work-ball-wrap{position:absolute;z-index:1;top:0;left:var(--work-rails-left,calc(50% + 257px));width:118px;height:var(--work-path-height,5000px);margin-left:-58px;overflow:hidden;pointer-events:none}.work-ball{position:absolute;inset:0 auto auto 0;width:118px;height:118px;border-radius:50%;background:var(--teal);transform:translateY(var(--work-lock,-118px));transition:transform .08s linear}
 .case-image{isolation:auto;overflow:hidden;background:currentColor!important}.case-image::before{display:none}.case-image img{position:absolute;z-index:2;inset:13px;width:calc(100% - 26px);height:calc(100% - 26px);border:0;opacity:0;transform:scale(.84);transition:opacity .16s ease,transform .28s cubic-bezier(.18,1.35,.35,1)}.case-image.ball-activated img{opacity:1;transform:scale(1)}
-@media(max-width:900px){.work-ball-wrap{display:none}.case-image img{opacity:1}}
+@media(max-width:900px){.work .work-route,.work-ball-wrap{display:none!important}.case-image img{inset:11px;width:calc(100% - 22px);height:calc(100% - 22px);opacity:1}}
+@media(max-width:680px){.case-image img{inset:6px;width:calc(100% - 12px);height:calc(100% - 12px)}}
 @media(prefers-reduced-motion:reduce){.work-ball-wrap{display:none}.work-ball{transition:none}}
 
 /* Continuous portrait path from Selected Work through testimonials and About. */
 .proof{overflow:visible}.proof-heading,.testimonial-carousel{position:relative;z-index:3}.about{z-index:2}.about-copy{position:relative;z-index:3;padding-right:38px}
-.portrait{transform:translateX(var(--portrait-shift,0px));background:var(--teal);overflow:hidden;transition:background-color .18s ease}.portrait span{inset:0;background:var(--teal);transition:background-color .18s ease}.portrait img{z-index:2;inset:13px;width:calc(100% - 26px);height:calc(100% - 26px);opacity:0;transform:scale(.84);transition:opacity .16s ease,transform .3s cubic-bezier(.18,1.35,.35,1)}.proof.portrait-activated + .about .portrait,.proof.portrait-activated + .about .portrait span{background:var(--orange)}.proof.portrait-activated + .about .portrait img{opacity:1;transform:scale(1)}
+.portrait{transform:translateX(var(--portrait-shift,0px));background:var(--orange);overflow:hidden;transition:background-color .18s ease}.portrait span{inset:0;background:var(--orange);transition:background-color .18s ease}.portrait img{z-index:2;inset:13px;top:5px;width:calc(100% - 26px);height:calc(100% - 26px);opacity:0;transform:scale(.91);transform-origin:center top;transition:opacity .16s ease,transform .3s cubic-bezier(.18,1.35,.35,1)}.proof.portrait-activated + .about .portrait,.proof.portrait-activated + .about .portrait span{background:var(--orange)}.proof.portrait-activated + .about .portrait img{opacity:1;transform:scale(1.08)}
+.portrait::after{content:"";position:absolute;z-index:4;inset:0;border:13px solid var(--orange);border-radius:50%;pointer-events:none}
 .portrait-rails{position:absolute;z-index:0;top:0;left:var(--portrait-path-left,75%);width:2px;height:var(--portrait-path-end,700px);background:#666762;box-shadow:-39px 0 0 #666762,-26px 0 0 #666762,-13px 0 0 #666762,13px 0 0 #666762,26px 0 0 #666762,39px 0 0 #666762;pointer-events:none}
 .portrait-ball-wrap{display:none}
-@media(max-width:900px){.portrait-rails,.portrait-ball-wrap{display:none}.portrait{transform:none}.portrait img{opacity:1}}
-@media(prefers-reduced-motion:reduce){.portrait-rails,.portrait-ball-wrap{display:none}.portrait{transform:translateX(var(--portrait-shift,0px))}.portrait img{opacity:1;transform:none;transition:none}}
+@media(max-width:900px){.portrait-rails,.portrait-ball-wrap{display:none}.portrait,.portrait span{background:var(--orange)!important}.portrait{transform:none}.portrait::after{border-width:11px}.portrait img{inset:11px;top:4px;width:calc(100% - 22px);height:calc(100% - 22px);opacity:1;transform:scale(1.08)}}
+@media(prefers-reduced-motion:reduce){.portrait-rails,.portrait-ball-wrap{display:none}.portrait{transform:translateX(var(--portrait-shift,0px))}.portrait img{opacity:1;transform:scale(1.08);transition:none}}
 
 /* Refined type weight and geometric icon language. */
 .contact-lead h2,.contact-copy h3{font-weight:500}
