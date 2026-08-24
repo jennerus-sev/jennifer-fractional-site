@@ -19,7 +19,7 @@
     - "Defined investment proposed before work begins"
   note: "Best for important work with a clear destination and defined boundaries."
 - name: "Executive intensive"
-  price: "flat fee"
+  price: "Fixed-fee intensive"
   label: "Clarity in two weeks"
   description: "A concentrated diagnostic for leaders who need a sharper definition of the problem, stronger alignment, and a credible path forward."
   includes:
