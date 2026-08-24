@@ -4,8 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ .Description | default site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
   <meta name="theme-color" content="#f6efdc">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · Jennifer Severns{{ end }}</title>
+  {{ if .IsHome }}<script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://jennifer.severns.net/#person","name":"Jennifer Severns","url":"https://jennifer.severns.net/","image":"https://jennifer.severns.net/images/about/jennifer-severns-seated-closed-smile-v6.png","jobTitle":"Fractional Customer Experience & Transformation Executive","sameAs":["https://www.linkedin.com/in/jennerus"],"homeLocation":{"@type":"Place","name":"Chicago, Illinois"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Northwestern University"},{"@type":"CollegeOrUniversity","name":"University of Tennessee"}],"knowsAbout":["Customer experience strategy","Experience design","Business transformation","Human-centered design","Service design","Operating model design","Generative artificial intelligence governance"]},{"@type":"ProfessionalService","@id":"https://jennifer.severns.net/#practice","name":"Jennifer Severns","url":"https://jennifer.severns.net/","description":"Jennifer Severns provides fractional customer experience design and transformation leadership for healthcare, benefits, financial services, insurance, membership, and other complex service-driven organizations.","founder":{"@id":"https://jennifer.severns.net/#person"},"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"serviceType":["Fractional customer experience leadership","Transformation leadership","Experience design strategy","Executive advisory services"]}]}
+  </script>{{ end }}
   {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 </head>

@@ -1,10 +1,11 @@
-baseURL: "https://example.com/"
+baseURL: "https://jennifer.severns.net/"
 languageCode: "en-us"
-title: "Jennifer Severns | Fractional Experience & Transformation Executive"
+title: "Jennifer Severns | Fractional Customer Experience & Transformation Executive"
 disableKinds: ["taxonomy", "term"]
+enableRobotsTXT: true
 
 params:
-  description: "Fractional executive leadership for organizations navigating experience, operations, technology, and change."
+  description: "Jennifer Severns provides fractional customer experience design and transformation leadership for healthcare, benefits, financial services, insurance, membership, and other complex service-driven organizations."
   author: "Jennifer Severns"
   email: "jennifer@severns.net"
   linkedin: "https://www.linkedin.com/in/jennerus"
@@ -13,4 +14,3 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
