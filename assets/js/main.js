@@ -244,27 +244,12 @@ if (carousel) {
 
 const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm) {
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
+  contactForm.addEventListener('submit', () => {
     const status = contactForm.querySelector('.form-status');
     const button = contactForm.querySelector('button[type="submit"]');
     status.hidden = false;
     status.textContent = 'Sending…';
     button.disabled = true;
-    try {
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { Accept: 'application/json' }
-      });
-      if (!response.ok) throw new Error('Form submission failed');
-      contactForm.reset();
-      status.textContent = 'Thank you. Your message has been sent.';
-    } catch (error) {
-      status.textContent = 'Your message could not be sent. Please try again or schedule a call.';
-    } finally {
-      button.disabled = false;
-    }
   });
 }
 
