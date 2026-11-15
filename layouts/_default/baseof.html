@@ -12,13 +12,15 @@
   </script>{{ end }}
   {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ block "head" . }}{{ end }}
 </head>
-<body>
+<body{{ if .Params.case_study }} class="case-study-page"{{ end }}>
   <a class="skip-link" href="#main">Skip to content</a>
   {{ partial "header.html" . }}
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
   {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+  {{ block "scripts" . }}{{ end }}
 </body>
 </html>

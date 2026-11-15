@@ -336,3 +336,12 @@ section[id]{scroll-margin-top:68px}
 .contact-form .button{width:max-content;margin-top:2px}.contact-form .form-status{grid-column:1/-1;margin:0;color:var(--teal);font-weight:600}
 @media(max-width:900px){.when-heading{grid-template-columns:1fr;gap:25px}.when-context h3{max-width:none}.faq{grid-template-columns:1fr;gap:32px}.faq-heading h2{max-width:none}}
 @media(max-width:680px){.hero-kicker{font-size:12px}.when-heading h2,.faq-heading h2{font-size:38px}.when-context h3{font-size:26px}.when-context p{font-size:16px}.faq{padding-top:56px;padding-bottom:60px}.faq-list summary{font-size:18px}.faq-answer{padding-right:22px}.contact-form{grid-template-columns:1fr}.contact-form div,.contact-form .form-wide{grid-column:1}}
+
+
+.case-copy .case-study-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--peach);
+  font: 600 var(--type-small)/1.4 var(--sans);
+}
+.case-copy .case-study-link:is(:hover, :focus-visible) { color: #fff; }

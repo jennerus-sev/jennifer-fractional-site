@@ -1,0 +1,150 @@
+{{ define "head" }}
+  {{ $styles := resources.Get "css/medicare.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+<section class="case-hero">
+  <div class="case-shell case-hero-grid"><div class="case-hero-text"><p class="case-kicker">Medicare Benefit Experience Design</p><h1>A benefit only matters when people <em>can use it.</em></h1><p class="case-deck">Designing a human-guided OTC benefit experience that connects member needs, customer care reps, plan requirements, ordering, and home delivery.</p><div class="case-client"><span>Client</span><strong>HealthTech Benefits Solutions</strong></div>
+<figure class="quote-bubble">
+      <span class="quote-symbol" aria-hidden="true">“</span>
+      <blockquote><p>Jennifer is insanely fast at assessing and implementing decisions. I am grateful for her invaluable work in helping get us to launch.</p></blockquote>
+      <figcaption>James Brett · President &amp; CEO, HealthTech Benefits Solutions</figcaption>
+    </figure>
+</div>
+<figure class="case-hero-art hbs-reproduction" aria-label="Three floating dimensional illustrations connected by a softly glowing service path: health plan card, customer care rep, and home delivery box">
+<div class="ecosystem-space">
+<svg aria-hidden="true" class="ecosystem-tethers" fill="none" viewBox="0 0 560 570">
+<defs><filter height="500%" id="signal-glow-v4" width="500%" x="-200%" y="-200%"><feGaussianBlur stdDeviation="4"></feGaussianBlur></filter></defs>
+<path class="tether" d="M385 120 C405 28 265 34 285 132 C305 218 172 190 145 285 C85 390 125 495 228 469 C288 454 300 399 375 410"></path>
+<circle class="travel-glow" fill="#fff5da" filter="url(#signal-glow-v4)" r="8"></circle>
+<circle class="travel-light" fill="#ffffff" r="3.2"></circle>
+</svg>
+<div class="ecosystem-node node-plan">
+<div aria-label="Original floating health plan benefit card illustration" class="hbs-sprite hbs-plan" role="img"><img alt="" class="hbs-direct-img" src="{{ "images/work/medicare/health-plan-card.webp" | relURL }}"/></div>
+</div>
+<div class="ecosystem-node node-rep">
+<div aria-label="Illustration of a customer care rep wearing a headset" class="hbs-sprite hbs-rep" role="img"><img alt="" class="hbs-direct-img" src="{{ "images/work/medicare/customer-care-rep.webp" | relURL }}"/></div>
+</div>
+<div class="ecosystem-node node-delivery">
+<div aria-label="Original dimensional illustration of an open shipment box with OTC products" class="hbs-box" role="img">
+<img alt="" decoding="async" loading="eager" src="{{ "images/work/medicare/otc-delivery-box.webp" | relURL }}"/>
+</div>
+</div>
+</div>
+</figure></div>
+</section>
+
+<div class="focus-strip"><div class="case-shell focus-grid"><div class="focus-thing"><div aria-hidden="true" class="mini-icon people"><i></i><i></i><i></i><i></i></div><div><h3>User research</h3><p>Understand member needs, behaviors, and barriers.</p></div></div>
+<div class="focus-thing"><div aria-hidden="true" class="mini-icon operations"><i></i><i></i><i></i></div><div><h3>Experience strategy</h3><p>Translate insight into a clear, workable service.</p></div></div>
+<div class="focus-thing"><div aria-hidden="true" class="mini-icon customer"><i></i><i></i></div><div><h3>End-to-end service design</h3><p>Connect people, processes, and tools through delivery.</p></div></div></div></div>
+<section class="case-section case-challenge">
+  <div class="case-shell challenge-grid"><div><p class="case-kicker">The challenge</p><h2 class="case-section-title">Coverage is not the same as access.</h2></div><div class="challenge-context"><p class="case-lede">Many Medicare Advantage and dual-eligible members have OTC benefits but aren't always sure what's covered, what they'll owe, or how to get the products they need.</p>
+<p class="case-lede">The design opportunity was to <strong>make benefits easier to use in the way that works for the member</strong>, while coordinating plan requirements, customer care teams, technology, suppliers, and fulfillment.</p></div></div>
+</section>
+<section class="case-section case-research">
+  <div class="case-shell"><div class="case-research-header"><p class="case-kicker">Research insights</p><h2 class="case-section-title">What we learned changed our approach.</h2><p class="case-lede">Eight interviews with dual-eligible members and a broader member survey distinguished awareness barriers from the friction of actually completing an order.</p></div><div class="case-insights"><article class="case-insight"><h3>Clarity before choice</h3><p>Understanding benefit availability, covered products, and out-of-pocket costs helped address hesitation and checkout surprises.</p></article>
+      <article class="case-insight"><h3>Trust is personal</h3><p>Helpful, knowledgeable customer care reps could give people confidence that guidance was legitimate and orders would be correct.</p></article>
+      <article class="case-insight"><h3>Make the next step easy</h3><p>Simple offers, accessible shopping options, and reliable delivery mattered more than adding another complicated channel.</p></article></div><a class="case-link research-link" href="https://drive.google.com/file/d/18cppTcHEx5pTAqecLjBGew_xPmCf1NKS/view" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M5 2h10l5 5v15H5zM15 2v6h5M8 13h8M8 16h7"></path></svg>Read the research report (PDF) <span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="case-section case-approach">
+  <div class="case-shell"><p class="case-kicker">Approach</p><h2 class="case-section-title">Designing from understanding to delivery.</h2><p class="case-lede">Research informed the service model, while close collaboration across teams connected the member journey to operational reality.</p><ol class="approach-grid" role="list"><li class="approach-step"><span class="approach-index" aria-hidden="true">01</span><h3>Listen</h3><p>Understand members' needs, experiences, concerns, and decision-making.</p></li>
+      <li class="approach-step"><span class="approach-index" aria-hidden="true">02</span><h3>Test</h3><p>Check qualitative patterns through broader survey research and team feedback.</p></li>
+      <li class="approach-step"><span class="approach-index" aria-hidden="true">03</span><h3>Map</h3><p>See the full journey across people, systems, compliance, and partners.</p></li>
+      <li class="approach-step"><span class="approach-index" aria-hidden="true">04</span><h3>Design</h3><p>Connect human guidance, ordering, fulfillment, and ongoing support.</p></li></ol></div>
+</section>
+<section class="case-map">
+  <div aria-label="Perspective-cropped view of the actual Miro journey and compliance process map" class="map-viewport" data-parallax=".12"><img alt="Detailed end-to-end compliance and member experience map shown on a large screen, photographed at a slight angle" class="journey-map-photo" loading="lazy" decoding="async" width="1700" height="756" src="{{ "images/work/medicare/process-map.webp" | relURL }}"/>
+<div class="map-bottom"><span>Detailed journey map</span><a href="https://docs.google.com/spreadsheets/d/1X-Wg9NaYpUgGDqs7M_jiwNV8mZmPr3YrGmXUYXTmcG0/edit?usp=sharing" rel="noopener noreferrer" target="_blank">View high-level process map <span aria-hidden="true">↗</span></a></div></div>
+</section>
+<section class="case-section case-blueprint">
+  <div class="case-shell"><div class="blueprint-title"><p class="case-kicker">Service blueprint</p><h2 class="case-section-title">Designing the service around human guidance.</h2><p class="case-lede">One member experience depended on customer care teams, plan rules, product selection, technology, suppliers, a responsive warehouse, and reliable delivery working together.</p></div>
+<div class="case-ecosystem" data-orbit-parallax role="group" aria-label="The member and the eight connected parts of the service">
+
+<div class="blueprint-web">
+  <div class="blueprint-plane blueprint-plane-a">
+    <svg class="blueprint-track" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+      <ellipse cx="500" cy="340" rx="435" ry="222" transform="rotate(-16 500 340)"/>
+    </svg>
+    <span class="blueprint-dot" id="orbit-print-and-digital-catalog" style="--node-x:74.645%;--node-y:14.743%" aria-hidden="true"></span>
+    <span class="blueprint-dot" id="orbit-delivery" style="--node-x:23.592%;--node-y:81.890%" aria-hidden="true"></span>
+  </div>
+  <div class="blueprint-plane blueprint-plane-b">
+    <svg class="blueprint-track" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+      <ellipse cx="500" cy="340" rx="413" ry="240" transform="rotate(19 500 340)"/>
+    </svg>
+    <span class="blueprint-dot" id="orbit-customer-care-reps" style="--node-x:29.677%;--node-y:11.627%" aria-hidden="true"></span>
+    <span class="blueprint-dot" id="orbit-health-plan" style="--node-x:10.177%;--node-y:35.901%" aria-hidden="true"></span>
+    <span class="blueprint-dot" id="orbit-ordering-platform" style="--node-x:86.185%;--node-y:45.057%" aria-hidden="true"></span>
+    <span class="blueprint-dot" id="orbit-supplier" style="--node-x:86.291%;--node-y:74.580%" aria-hidden="true"></span>
+    <span class="blueprint-dot" id="orbit-warehouse-and-fulfillment" style="--node-x:64.067%;--node-y:86.242%" aria-hidden="true"></span>
+  </div>
+  <div class="blueprint-plane blueprint-plane-c">
+    <svg class="blueprint-track" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M48 340 A452 154 0 0 1 952 340" transform="rotate(2 500 340)"/>
+    </svg>
+  </div>
+</div>
+  <div class="blueprint-plane blueprint-plane-c blueprint-plane-front">
+    <svg class="blueprint-track" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M48 340 A452 154 0 0 0 952 340" transform="rotate(2 500 340)"/>
+    </svg>
+    <span class="blueprint-dot" id="orbit-otc-products" style="--node-x:16.596%;--node-y:61.918%" aria-hidden="true"></span>
+  </div>
+<figure class="blueprint-member">
+    <img src="{{ "images/work/medicare/member.webp" | relURL }}" alt="Illustrated older adult in a teal cardigan" loading="lazy" decoding="async" width="654" height="1000">
+    <figcaption>
+  <svg class="member-ribbon-tails" aria-hidden="true" viewBox="0 0 240 28" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="member-ribbon-fold">
+        <stop stop-color="var(--orange)"/>
+        <stop offset="17%" stop-color="#992f20"/>
+        <stop offset="83%" stop-color="#992f20"/>
+        <stop offset="100%" stop-color="var(--orange)"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#member-ribbon-fold)" d="M6 2H234 Q238 2 236 5L228 12 Q226 14 228 16L236 23 Q238 26 234 26H6 Q2 26 4 23L12 16 Q14 14 12 12L4 5 Q2 2 6 2Z"/>
+  </svg>
+  Member
+</figcaption>
+  </figure>
+<div class="blueprint-labels">
+  <span class="blueprint-label" data-orbit-dot="orbit-print-and-digital-catalog" style="--node-x:74.645%;--node-y:14.743%">Print and digital catalog</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-delivery" style="--node-x:23.592%;--node-y:81.890%">Delivery</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-customer-care-reps" style="--node-x:29.677%;--node-y:11.627%">Customer care reps</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-health-plan" style="--node-x:10.177%;--node-y:35.901%">Health plan</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-ordering-platform" style="--node-x:86.185%;--node-y:45.057%">Ordering platform</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-supplier" style="--node-x:86.291%;--node-y:74.580%">Supplier</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-warehouse-and-fulfillment" style="--node-x:64.067%;--node-y:86.242%">Warehouse and fulfillment</span>
+  <span class="blueprint-label" data-orbit-dot="orbit-otc-products" style="--node-x:16.596%;--node-y:61.918%">OTC products</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="case-catalog-photo" aria-label="EasyOTC printed catalog">
+  <div class="catalog-viewport" data-parallax=".075">
+    <div class="catalog-photo">
+      <div class="catalog-artwork">
+        <img src="{{ "images/work/medicare/catalog.jpg" | relURL }}" width="1672" height="941" loading="lazy" decoding="async" alt="The EasyOTC catalog cover overlaps two open spreads on a wood tabletop.">
+        <span class="catalog-gutter catalog-gutter-products" aria-hidden="true"></span>
+        <span class="catalog-gutter catalog-gutter-medicine" aria-hidden="true"></span>
+        <span class="catalog-edge" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="case-section case-outcomes">
+  <div class="case-shell outcomes-wrap"><div><p class="case-kicker">Outcomes</p><h2 class="case-section-title">From research to a coordinated service launch.</h2><p class="case-lede">Research informed a coordinated benefit service that connected customer care teams, member guidance, ordering, operational safeguards, and delivery in a successful launch.</p></div><div class="outcome-list"><article><span aria-hidden="true" class="section-check"></span><div><strong>Make the OTC benefit easier to use</strong><p>Customer care reps made the benefit visible at signup, helped members find products they needed, and guided them through ordering. Orders could move to fulfillment once eligibility was verified.</p></div></article>
+      <article><span aria-hidden="true" class="section-check"></span><div><strong>Drive plan utilization</strong><p>We engaged members right after signup by helping them start an OTC order before coverage took effect. Members who use their plan within the first 90 days are more likely to stay with that plan.</p></div></article>
+      <article><span aria-hidden="true" class="section-check"></span><div><strong>Extend the insurance carrier brand</strong><p>Coordinated fulfillment and home delivery carried the plan’s service and messaging from the enrollment conversation to the member’s doorstep, with order support along the way.</p></div></article>
+      <article><span aria-hidden="true" class="section-check"></span><div><strong>Surface insight for the health plan</strong><p>Aggregated search and ordering patterns gave the plan a clearer view of what members looked for and what they chose.</p></div></article></div></div>
+</section>
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ $script := resources.Get "js/medicare.js" | minify | fingerprint }}
+  <script type="module" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}

@@ -95,6 +95,9 @@
           <p class="case-org">{{ .organization }}</p><p class="case-category">{{ .category }}</p>
           <h3>{{ .title }}</h3><p>{{ .summary }}</p>
           <div class="metrics">{{ range .metrics }}<div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}</div>
+          {{ with .page }}{{ with site.GetPage . }}
+            <a class="case-study-link" href="{{ .RelPermalink }}">Read the case study <span aria-hidden="true">↗</span></a>
+          {{ end }}{{ end }}
         </div>
         <figure class="case-image {{ .color }}"><img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy"></figure>
       </article>
