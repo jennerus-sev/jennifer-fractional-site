@@ -1,14 +1,18 @@
+{{ $current := . }}
 {{ $home := cond .IsHome "" site.Home.RelPermalink }}
 <header class="site-header">
   <a class="wordmark" href="{{ $home }}#top"><strong>Jennifer Severns</strong><span>·</span><small>Fractional executive</small></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
     <a href="{{ $home }}#when">Services</a>
-    {{ if .Params.case_study }}
-      <div class="work-nav" id="work-nav">
-        <button id="work-toggle" type="button" aria-controls="work-menu" aria-expanded="false">Work <span class="work-caret" aria-hidden="true"></span></button>
+    {{ with where site.RegularPages "Params.case_study" true }}
+      <div class="work-nav{{ if $current.Params.case_study }} is-current{{ end }}">
+        <button class="work-toggle" type="button" aria-controls="work-menu" aria-expanded="false">Work <span class="work-caret" aria-hidden="true"></span></button>
         <div class="work-menu" id="work-menu" hidden>
-          <a href="#main" aria-current="page">{{ .LinkTitle }}</a>
+          <a href="{{ $home }}#work">Selected Work</a>
+          {{ range .ByTitle }}
+            <a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $current.RelPermalink }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a>
+          {{ end }}
         </div>
       </div>
     {{ else }}

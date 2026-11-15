@@ -345,3 +345,82 @@ section[id]{scroll-margin-top:68px}
   font: 600 var(--type-small)/1.4 var(--sans);
 }
 .case-copy .case-study-link:is(:hover, :focus-visible) { color: #fff; }
+
+.site-nav .work-nav { position: relative; display: flex; align-items: center; padding-block: 10px; }
+.site-nav .work-nav > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+.site-nav .work-nav > button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .28s cubic-bezier(.22,.7,.25,1);
+}
+.site-nav .work-nav.is-current > button::after {
+  background: var(--peach);
+  transform: scaleX(1);
+}
+.site-nav .work-toggle:is(:hover, :focus-visible, [aria-expanded="true"])::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-nav .work-nav > button::after { transition: none; }
+}
+.site-nav .work-caret {
+  width: 7px;
+  height: 7px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.site-nav .work-menu {
+  position: absolute;
+  right: -32px;
+  top: 100%;
+  width: 295px;
+  padding: 12px 14px;
+  border-top: 2px solid var(--peach);
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 0 15px 28px #0002;
+}
+.site-nav .work-menu a {
+  display: block;
+  padding: 12px 9px;
+  color: var(--ink);
+  font: 500 14px/1.35 var(--sans);
+}
+.site-nav .work-menu a:is(:hover, :focus-visible) {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+}
+.site-nav .work-menu a::after { content: none; }
+.site-nav .work-menu a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--peach); }
+.site-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.site-footer .footer-link { text-underline-offset: 3px; }
+@media (max-width: 820px) {
+  .site-nav .work-nav { display: block; }
+  .site-nav .work-nav > button { margin-left: 8px; }
+  .site-nav .work-menu { position: static; width: 100%; box-shadow: none; }
+}

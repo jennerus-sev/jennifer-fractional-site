@@ -1,1 +1,10 @@
-<footer class="site-footer"><a class="footer-name" href="{{ cond .IsHome "#top" site.Home.RelPermalink }}"><strong>Jennifer<br>Severns</strong></a><p>Fractional experience &amp; transformation leadership<br>Chicago · Working with organizations everywhere</p>{{ if .Params.case_study }}<div class="footer-links"><a class="footer-link" href="{{ site.Home.RelPermalink }}#contact">Contact me</a><a class="footer-link" href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></div>{{ else }}<a class="footer-link" href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a>{{ end }}<p>© {{ now.Year }} Jennifer Severns</p></footer>
+{{ $home := cond .IsHome "" site.Home.RelPermalink }}
+<footer class="site-footer">
+  <a class="footer-name" href="{{ $home }}#top"><strong>Jennifer<br>Severns</strong></a>
+  <p>Fractional experience &amp; transformation leadership<br>Chicago · Working with organizations everywhere</p>
+  <div class="footer-links">
+    <a class="footer-link" href="{{ $home }}#contact">Contact me</a>
+    <a class="footer-link" href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a>
+  </div>
+  <p>© {{ now.Year }} Jennifer Severns</p>
+</footer>

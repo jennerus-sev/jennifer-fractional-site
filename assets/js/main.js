@@ -1,17 +1,59 @@
-const button = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-if (button && nav) {
-  button.addEventListener('click', () => {
-    const open = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!open));
-    button.textContent = open ? 'Menu' : 'Close';
-    nav.classList.toggle('open', !open);
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.site-nav');
+
+if (menuButton && navigation) {
+  const work = navigation.querySelector('.work-nav');
+  const workButton = work?.querySelector('.work-toggle');
+  const workMenu = work?.querySelector('.work-menu');
+  const desktop = window.matchMedia('(min-width: 821px)');
+
+  function showWork(open) {
+    if (!workMenu) return;
+    workMenu.hidden = !open;
+    workButton.setAttribute('aria-expanded', String(open));
+  }
+
+  function showNavigation(open) {
+    navigation.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.textContent = open ? 'Close' : 'Menu';
+    if (!open) showWork(false);
+  }
+
+  menuButton.addEventListener('click', () => showNavigation(!navigation.classList.contains('open')));
+  navigation.addEventListener('click', (event) => {
+    if (event.target.closest('a')) showNavigation(false);
   });
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-    button.setAttribute('aria-expanded', 'false');
-    button.textContent = 'Menu';
-    nav.classList.remove('open');
-  }));
+  navigation.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (workMenu && !workMenu.hidden) {
+      showWork(false);
+      workButton.focus();
+    } else if (navigation.classList.contains('open')) {
+      showNavigation(false);
+      menuButton.focus();
+    }
+  });
+  desktop.addEventListener('change', () => showNavigation(false));
+
+  if (workMenu) {
+    workButton.addEventListener('click', (event) => {
+      const desktopMouse = desktop.matches && event.detail > 0 && event.pointerType !== 'touch';
+      showWork(desktopMouse || workMenu.hidden);
+    });
+    work.addEventListener('pointerenter', (event) => {
+      if (desktop.matches && event.pointerType !== 'touch') showWork(true);
+    });
+    work.addEventListener('pointerleave', () => {
+      if (desktop.matches && !work.contains(document.activeElement)) showWork(false);
+    });
+    work.addEventListener('focusout', (event) => {
+      if (!work.contains(event.relatedTarget)) showWork(false);
+    });
+    document.addEventListener('click', (event) => {
+      if (!work.contains(event.target)) showWork(false);
+    });
+  }
 }
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
