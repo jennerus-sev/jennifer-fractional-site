@@ -10,7 +10,7 @@
         <button class="work-toggle" type="button" aria-controls="work-menu" aria-expanded="false">Work <span class="work-caret" aria-hidden="true"></span></button>
         <div class="work-menu" id="work-menu" hidden>
           <a href="{{ $home }}#work">Selected Work</a>
-          {{ range .ByTitle }}
+          {{ range .ByWeight }}
             <a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $current.RelPermalink }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a>
           {{ end }}
         </div>

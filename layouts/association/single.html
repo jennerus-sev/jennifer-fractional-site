@@ -1,0 +1,287 @@
+{{ define "head" }}
+  {{ $styles := resources.Get "css/association.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+  <section class="case-hero">
+    <div class="case-shell case-hero-grid">
+      <div class="case-hero-text">
+        <p class="case-kicker">Association Transformation</p>
+        <h1>Rebuilding the AMA <em>around its members.</em></h1>
+        <p class="case-deck">We redesigned what membership offered and how the American Marketing Association delivered it as part of a national transformation. We tested new offers, rebuilt the systems behind them, and worked with chapters to put the changes into practice.</p>
+        <div class="case-client"><span>Organization</span><strong>American Marketing Association</strong></div>
+        <figure class="quote-bubble">
+          <span class="quote-symbol" aria-hidden="true">“</span>
+          <blockquote><p>Jennifer’s strategic mindset, customer orientation, collaborative spirit, and inspiring work ethic have made AMA better every day.</p></blockquote>
+          <figcaption>Stacy Armijo · Former Chairman of the Board, American Marketing Association</figcaption>
+        </figure>
+      </div>
+      <figure class="ama-hero-art">
+        <svg class="ama-hero-scene" viewBox="575 74 568 476" role="img" aria-label="An AMA member in front of a sage circle, surrounded by floating messages, two community badges, and content including an article, a template, and an event invitation.">
+          <defs>
+            <image id="ama-member-art" href="{{ "images/work/association/hero-objects.webp" | relURL }}" width="1448" height="1086"/>
+            <clipPath id="ama-messages-cut">
+              <path d="M341 0H914V275H810L785 263L742 256L720 235L692 223L661 222L619 230L590 236L548 247H341Z"/>
+            </clipPath>
+            <clipPath id="ama-content-cut">
+              <path d="M891 715 L1040 676 L1056 673 L1062 650 L1080 630 H1448 V1055 H1005 V1001 H927 Q921 1001 917 992 L862 791 Q852 756 856 744 Q860 724 891 715Z"/>
+            </clipPath>
+            <linearGradient id="ama-message-bottom" x1="0" y1="208" x2="0" y2="243" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3b6360"/><stop offset=".68" stop-color="#365e5a"/><stop offset="1" stop-color="#294c48"/>
+            </linearGradient>
+            <linearGradient id="ama-community-peach" x2="1" y2="1">
+              <stop stop-color="#ffe8d2"/><stop offset=".62" stop-color="#f6c9aa"/><stop offset="1" stop-color="#eeb093"/>
+            </linearGradient>
+            <linearGradient id="ama-community-sage" x2="1" y2="1">
+              <stop stop-color="#e1ebd9"/><stop offset=".64" stop-color="#c7d9c1"/><stop offset="1" stop-color="#b1c7af"/>
+            </linearGradient>
+            <linearGradient id="ama-community-teal" x2="0" y2="1">
+              <stop stop-color="#407c76"/><stop offset="1" stop-color="#174949"/>
+            </linearGradient>
+            <linearGradient id="ama-community-coral" x2="0" y2="1">
+              <stop stop-color="#dd825e"/><stop offset="1" stop-color="#a84a30"/>
+            </linearGradient>
+            <g id="ama-community-person">
+              <circle cy="-25" r="19"/>
+              <path d="M-34 38v-8a34 34 0 0 1 68 0v8q0 5-5 5h-58q-5 0-5-5Z"/>
+            </g>
+            <g id="ama-community-group">
+              <use href="#ama-community-person" transform="translate(-50 -6) scale(1.13)"/>
+              <use href="#ama-community-person" transform="translate(50 -6) scale(1.13)"/>
+              <use href="#ama-community-person" transform="translate(0 23) scale(1.31)"/>
+            </g>
+          </defs>
+          <circle class="ama-member-halo" cx="831" cy="344" r="188" fill="#cdd1c5"/>
+          <image href="{{ "images/work/association/member.webp" | relURL }}" x="678" y="158" width="307" height="384"/>
+          <g transform="translate(656 405)">
+            <g class="ama-floater ama-floater-left">
+              <g transform="scale(.477)">
+                <circle cx="-3" cy="4" r="130" fill="#b28b75"/>
+                <circle r="129" fill="url(#ama-community-peach)" stroke="#fae0c7" stroke-width="3"/>
+                <use href="#ama-community-group" fill="url(#ama-community-teal)"/>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(990 190)">
+            <g class="ama-floater ama-floater-right">
+              <g transform="scale(.488)">
+                <circle cx="-3" cy="4" r="130" fill="#91a48a"/>
+                <circle r="129" fill="url(#ama-community-sage)" stroke="#dce8d4" stroke-width="3"/>
+                <use href="#ama-community-group" fill="url(#ama-community-coral)"/>
+              </g>
+            </g>
+          </g>
+          <g class="ama-floater ama-floater-messages">
+            <g transform="translate(942 355) scale(.374) translate(-382 -14)">
+              <path d="M594 207H874V216Q869 233 839 238L838 260Q838 270 828 265L802 243Q797 238 789 238L631 231Q605 230 594 217Z" fill="url(#ama-message-bottom)"/>
+              <use href="#ama-member-art" clip-path="url(#ama-messages-cut)"/>
+            </g>
+          </g>
+          <g class="ama-floater ama-floater-content">
+            <g transform="translate(686 160) rotate(-25) scale(.31) translate(-1135 -835)">
+              <use href="#ama-member-art" clip-path="url(#ama-content-cut)"/>
+            </g>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <div class="focus-strip">
+    <div class="case-shell focus-grid">
+      <div class="focus-thing"><div class="mini-icon people" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div><h3>User research</h3><p>Understand what members need at different points in their careers.</p></div></div>
+      <div class="focus-thing"><svg class="mini-icon ama-service-icon" viewBox="0 0 58 52" aria-hidden="true"><path d="M28 26 11 13 M28 26l18-13 M28 26v15" fill="none" stroke="var(--teal)" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="26" r="7.5" fill="var(--teal)"/><circle cx="11" cy="13" r="5.5" fill="var(--orange)"/><circle cx="46" cy="13" r="5.5" fill="var(--teal)"/><circle cx="28" cy="41" r="5.5" fill="var(--orange)"/></svg><div><h3>Service design</h3><p>Connect the membership offer, platforms, and support around those needs.</p></div></div>
+      <div class="focus-thing"><div class="mini-icon operations ama-change-icon" aria-hidden="true"><i></i><i></i></div><div><h3>Change management</h3><p>Help staff, volunteers, and chapters adopt new ways of working.</p></div></div>
+    </div>
+  </div>
+
+  <section class="case-section case-challenge">
+    <div class="case-shell challenge-grid">
+      <div><p class="case-kicker">The challenge</p><h2 class="case-section-title">Membership was declining. The organization was fragmented.</h2></div>
+      <div class="challenge-context">
+        <p class="case-lede">Declining membership threatened the AMA’s financial stability. Across its national organization and chapter network, more than 400 brand expressions made for uneven member experiences. Legacy systems made it hard to deliver a consistent offer.</p>
+        <p class="case-lede">The work called for a redesign of <strong>what members got, how they got it, and how staff and volunteers supported it</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-research">
+    <div class="case-shell">
+      <div class="case-research-header"><p class="case-kicker">Research insights</p><h2 class="case-section-title">What the audit and early tests clarified.</h2></div>
+      <div class="case-insights">
+        <article class="case-insight"><h3>Start with member needs</h3><p>We tested different ways to describe membership, from needs such as finding a job or volunteering to topics such as SEO and branding.</p></article>
+        <article class="case-insight"><h3>Plan the systems together</h3><p>The audit covered products, finances, technology, and staffing. It showed why changes to pricing and benefits had to be planned alongside the systems and processes that would deliver them.</p></article>
+        <article class="case-insight"><h3>Design for chapter adoption</h3><p>Chapter leaders helped develop the One AMA brand system. Feedback from the phased rollout helped us refine the templates and guidance chapters would use.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-approach">
+    <div class="case-shell">
+      <p class="case-kicker">Approach</p>
+      <h2 class="case-section-title">From testing the offer to changing how it was delivered.</h2>
+      <ol class="approach-grid" role="list">
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">01</span><h3>Audit</h3><p>Review products, finances, systems, and workflows with staff and volunteer leaders.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">02</span><h3>Prototype</h3><p>Break membership into individual benefits and test ways to group and describe them.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">03</span><h3>Sequence</h3><p>Map dependencies across product releases, technology, staffing, and change management.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">04</span><h3>Roll out</h3><p>Build cross-functional squads, train chapter leaders, and use feedback to refine rollout resources.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="case-section case-blueprint ama-strategy">
+    <div class="case-shell">
+      <div class="blueprint-title">
+        <p class="case-kicker">Strategy and audit</p>
+        <h2 class="case-section-title">Build systems that keep learning from members.</h2>
+        <p class="case-lede">We wanted to learn from how members used training, certification, content, and chapter communities. Those insights could help the AMA recommend relevant resources and see where members needed more support.</p>
+      </div>
+      <ol class="ama-strategy-steps" role="list">
+        <li>
+          <span class="ama-strategy-index" aria-hidden="true">01</span>
+          <div>
+            <h3>Audit the existing systems</h3>
+            <p>We audited the member experience, business model, internal workflows, technology, and financial platform. We mapped where member data originated, how it moved between systems, and what the existing architecture could support.</p>
+            <p class="ama-strategy-finding">The audit showed that our systems couldn’t capture and connect the data the strategy needed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ama-strategy-index" aria-hidden="true">02</span>
+          <div>
+            <h3>Rebuild the technology</h3>
+            <p>We moved the CRM from Personify to Salesforce, replaced a customized SharePoint CMS with WordPress, and migrated legacy data to the cloud. We designed the data flows around the member experience so the interface could use what we learned from participation.</p>
+          </div>
+        </li>
+      </ol>
+      <figure class="ama-data-figure">
+        <img src="{{ "images/work/association/data-interface-sketch.webp" | relURL }}" width="1774" height="887" alt="Black-marker sketch of Data within the Design Interface. Programs, chapters, and recommendations connect to the member. Participation and contributions generate data that informs future recommendations." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="case-section ama-prototyping">
+    <div class="case-shell">
+      <p class="case-kicker">Prototyping and testing</p>
+      <h2 class="case-section-title">Make the new membership model testable.</h2>
+      <p class="case-lede">In workshops, staff and volunteers used canvases and storyboards to make the business model and member journeys concrete. We broke membership into individual benefits, then prototyped ways to group and describe them around member needs or skills.</p>
+    </div>
+    <figure class="ama-workroom">
+      <img src="{{ "images/work/association/workshop-whiteboard.webp" | relURL }}" width="1774" height="887" alt="Recreated workshop whiteboard with a taped business model canvas and concept sketches, sticky notes grouped in hand-drawn circles labeled Place, Badge, and Coach, and storyboard panels drawn across the bottom." loading="lazy">
+    </figure>
+    <div class="case-shell ama-dna">
+      <div class="ama-dna-copy">
+        <h3>Marketing DNA</h3>
+        <p class="case-lede">Marketing DNA was one of several prototypes we tested with members. It let a marketer start a skills assessment, compare their results with peers, and get tailored learning suggestions.</p>
+      </div>
+      <figure class="ama-dna-devices">
+        <img src="{{ "images/work/association/marketing-dna.webp" | relURL }}" width="1536" height="1024" alt="Marketing DNA shown on an open laptop behind two angled phones. The laptop shows the assessment landing page, and the phones show the branding competency and skills persona." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="case-section ama-sequence">
+    <div class="case-shell">
+      <p class="case-kicker">Sequence</p>
+      <h2 class="case-section-title">Make the work visible across the AMA.</h2>
+      <p class="case-lede">The four-year roadmap put organizational, experience design, and technology changes on the same timeline. It connected the 2019 platform releases with plans for the new membership model and a competency assessment pilot through FY22.</p>
+      <p class="case-lede">It shows which products and features are released, what benefits they unlock, who benefits (members, volunteers, support center staff, and the wider business), and what each benefit strengthens, such as community, personalization, or agility.</p>
+    </div>
+    <div class="ama-roadmap" aria-label="Transformation roadmap">
+      <div class="ama-roadmap-stage">
+        <figure class="ama-roadmap-paper">
+          <img src="{{ "images/work/association/transformation-roadmap.webp" | relURL }}" width="3000" height="491" alt="The full original AMA transformation roadmap slide, showing Phase 1 through Phase 4 with product and feature releases and associated benefits." loading="lazy">
+          <span class="ama-paper-roll" aria-hidden="true"></span>
+        </figure>
+        <div class="case-shell ama-roadmap-links">
+          <span>Transformation roadmap</span>
+          <button type="button" class="artifact-text" data-roadmap-open>Enlarge Phase 2 detail ↗</button>
+          <a class="artifact-text" href="https://docs.google.com/presentation/d/1Oec9VJboMMRz8CwAmtCId7euwax2exYa0kx1X6HueTM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open the full roadmap <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <template id="phase-two-detail"><img src="{{ "images/work/association/roadmap-phase-two.webp" | relURL }}" width="1611" height="1070" alt="Phase 2 roadmap linking member-facing changes with support-center, technology, and data dependencies."></template>
+    </div>
+    <div class="case-shell">
+      <div class="ama-stakeholders">
+        <article>
+          <h3>Engage chapters, councils, and committees</h3>
+          <p>Chapter leaders, volunteer councils, and committee members helped shape the work and test what would be practical locally. Their feedback informed the rollout, training, and support.</p>
+        </article>
+        <article>
+          <h3>Help staff work across functions</h3>
+          <p>We brought staff together in cross-functional squads and introduced Kanban so teams could work out loud. Shared boards made priorities, progress, and blockers visible across teams.</p>
+        </article>
+      </div>
+      <figure class="ama-kanban">
+        <img class="ama-kanban-photo" src="{{ "images/work/association/kanban-board.webp" | relURL }}" width="3264" height="2448" alt="The Kanban board on a central wall in the AMA office, with sticky notes moving through To Do, Planning, Development, Testing, Deployed, and Review." loading="lazy">
+        <figcaption>The team’s Kanban board on a central office wall where anyone could see it.</figcaption>
+      </figure>
+    </div>
+    <div class="case-shell ama-transition">
+      <h3>Implementation plan</h3>
+      <p class="case-lede">The plan tracked technology releases, My AMA unbundling tests, data work, and change management simultaneously. We could easily update it as dependencies and priorities changed.</p>
+    </div>
+    <figure class="ama-laptop-stage">
+      <div class="ama-laptop-preview">
+        <svg class="ama-laptop-photo" viewBox="0 0 1774 887" role="img" aria-label="Laptop showing the implementation plan, including technology releases, My AMA testing and data work, and the change management transition.">
+          <foreignObject x="0" y="0" width="1774" height="887">
+            <div class="ama-laptop-sheet">
+              <img src="{{ "images/work/association/implementation-plan.webp" | relURL }}" width="1149" height="372" alt="" loading="lazy">
+            </div>
+          </foreignObject>
+        </svg>
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section ama-rollout">
+    <div class="case-shell ama-rollout-grid">
+      <div>
+        <p class="case-kicker">One AMA rollout</p>
+        <h2 class="case-section-title">Create a shared story chapters could use.</h2>
+        <p class="case-lede">National and chapter leaders co-created a brand system, then tested it in phases with templates, guides, and training. The <em>Coach, Badge, Place</em> booklet translated the research into three ways to talk about what members valued. When in-person events stopped, we built a shared schedule to coordinate the shift online. The brand system helped chapters communicate the new calendar and weekly digital benefits to members.</p>
+      </div>
+      <figure class="ama-offer">
+        <img src="{{ "images/work/association/digital-membership-offer.webp" | relURL }}" width="1536" height="1024" alt="AMA’s digital membership campaign on a laptop and two phones, promoting free training and new weekly benefits." loading="lazy">
+      </figure>
+    </div>
+    <div class="ama-booklet-band" role="group" aria-label="Four overlapping spreads from the One AMA brand booklet">
+      <div class="ama-spreads">
+        <div class="ama-booklet ama-booklet-intro" role="img" aria-label="Opening spread, Helping Marketers Be Greater Than Ever, with airplanes trailing colored smoke"><span class="ama-spread ama-intro" aria-hidden="true"></span></div>
+        <div class="ama-booklet ama-booklet-badge" role="img" aria-label="Badge, an open two-page booklet spread with white lettering and blue photography"><span class="ama-spread ama-badge" aria-hidden="true"></span></div>
+        <div class="ama-booklet ama-booklet-place" role="img" aria-label="Place, an open two-page booklet spread with a photograph of people standing on a ledge"><span class="ama-spread ama-place" aria-hidden="true"></span></div>
+        <div class="ama-booklet ama-booklet-coach" role="img" aria-label="Coach, an open two-page booklet spread showing people rappelling together"><span class="ama-spread ama-coach" aria-hidden="true"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-outcomes">
+    <div class="case-shell outcomes-wrap">
+      <div><p class="case-kicker">Outcomes</p><h2 class="case-section-title">Stronger renewals and a rollout chapters adopted.</h2><p class="case-lede">The first year brought financial stability and stronger renewals. The shared brand and new ways of working helped the AMA keep serving members when the pandemic disrupted in-person programs.</p></div>
+      <div class="outcome-list">
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>7.5% increase in dues revenue</strong><p>Renewal rates also improved by 2.1% in the first year of the transformation.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>100% chapter adoption of One AMA</strong><p>By fiscal year-end, chapters had adopted the shared brand system.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>3.93% membership growth during the pivot</strong><p>Membership grew from March to September 2020 as the AMA shifted events and training online.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Employee engagement rose from 55% to 96%</strong><p>During the transformation, the AMA formed its first innovation and data teams and organized work in cross-functional squads.</p></div></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="artifact-viewer" aria-labelledby="artifact-title">
+  <div class="artifact-toolbar">
+    <h2 id="artifact-title">Phase 2 transformation roadmap</h2>
+    <div>
+      <button type="button" class="artifact-text" data-artifact-zoom aria-pressed="false">Zoom in</button>
+      <button type="button" class="artifact-text" data-artifact-close>Close</button>
+    </div>
+  </div>
+  <div class="artifact-stage"></div>
+</dialog>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ $script := resources.Get "js/association.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ end }}

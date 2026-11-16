@@ -12,6 +12,10 @@
   </script>{{ end }}
   {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ if .Params.case_study }}
+    {{ $caseStyles := resources.Get "css/case-study.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $caseStyles.RelPermalink }}" integrity="{{ $caseStyles.Data.Integrity }}">
+  {{ end }}
   {{ block "head" . }}{{ end }}
 </head>
 <body{{ if .Params.case_study }} class="case-study-page"{{ end }}>
