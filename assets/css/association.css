@@ -1,6 +1,5 @@
 .case-study-page {
   --ama-booklet: url("../images/work/association/one-ama-booklet.webp");
-  --ama-laptop: url("../images/work/association/implementation-laptop.webp");
 }
 
 .ama-hero-art {
@@ -171,33 +170,14 @@
   font: 600 clamp(19px, 2.15vw, 25px)/1.15 var(--sans);
 }
 .ama-laptop-stage { margin: 25px 0 0; overflow: hidden; }
-.ama-laptop-preview {
-  background: #604731 var(--ama-laptop) center / cover no-repeat;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .ama-laptop-preview { transform: translateY(var(--laptop-shift, 0px)) scale(1.15); }
-}
 .ama-laptop-photo {
   display: block;
   width: 100%;
   height: auto;
 }
-.ama-laptop-sheet {
-  width: 910px;
-  height: 530px;
-  overflow: hidden;
-  background: #f9faf8;
-  transform-origin: left top;
-  /* Maps the source grid into the four corners of the photographed screen. */
-  transform: matrix3d(.927825, -.008217, 0, -.000046659, -.053706, .966944, 0, -.000010264, 0, 0, 1, 0, 479, 131, 0, 1);
+@media (prefers-reduced-motion: no-preference) {
+  .ama-laptop-photo { transform: translateY(var(--laptop-shift, 0px)) scale(1.15); }
 }
-.ama-laptop-sheet::before {
-  content: "";
-  display: block;
-  height: 22px;
-  background: linear-gradient(#f6f6f5, #e9eae8);
-}
-.ama-laptop-sheet img { display: block; width: 180%; max-width: none; height: auto; }
 .ama-stakeholders {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
