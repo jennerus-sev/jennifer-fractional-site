@@ -28,21 +28,25 @@
   });
 
   const roadmap = document.querySelector('.ama-roadmap-stage');
+  const laptop = document.querySelector('[data-laptop-parallax]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let roadmapFrame;
-  function updateRoadmap() {
-    roadmapFrame = undefined;
-    const { top, height } = roadmap.getBoundingClientRect();
+  let parallaxFrame;
+  function updateParallax() {
+    parallaxFrame = undefined;
     const viewport = window.innerHeight;
-    const progress = Math.max(0, Math.min(1, (viewport - top) / (viewport + height)));
-    const offset = reducedMotion.matches ? 0 : -height * .065 * progress;
-    roadmap.style.setProperty('--roadmap-shift', `${offset.toFixed(1)}px`);
+    const roadmapBounds = roadmap.getBoundingClientRect();
+    const laptopBounds = laptop.getBoundingClientRect();
+    const progress = ({ top, height }) => Math.max(0, Math.min(1, (viewport - top) / (viewport + height)));
+    const roadmapOffset = reducedMotion.matches ? 0 : -roadmapBounds.height * .065 * progress(roadmapBounds);
+    const laptopOffset = reducedMotion.matches ? 0 : laptopBounds.height * .065 * (progress(laptopBounds) * 2 - 1);
+    roadmap.style.setProperty('--roadmap-shift', `${roadmapOffset.toFixed(1)}px`);
+    laptop.style.setProperty('--laptop-shift', `${laptopOffset.toFixed(1)}px`);
   }
-  function queueRoadmap() {
-    if (roadmapFrame === undefined) roadmapFrame = requestAnimationFrame(updateRoadmap);
+  function queueParallax() {
+    if (parallaxFrame === undefined) parallaxFrame = requestAnimationFrame(updateParallax);
   }
-  window.addEventListener('scroll', queueRoadmap, { passive: true });
-  window.addEventListener('resize', queueRoadmap);
-  reducedMotion.addEventListener('change', queueRoadmap);
-  updateRoadmap();
+  window.addEventListener('scroll', queueParallax, { passive: true });
+  window.addEventListener('resize', queueParallax);
+  reducedMotion.addEventListener('change', queueParallax);
+  updateParallax();
 })();

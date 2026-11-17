@@ -5,7 +5,7 @@
 
 {{ define "main" }}
 <main id="main">
-  <section class="case-hero">
+  <section class="case-hero" data-hero-parallax>
     <div class="case-shell case-hero-grid">
       <div class="case-hero-text">
         <p class="case-kicker">Association Transformation</p>
@@ -18,7 +18,7 @@
           <figcaption>Stacy Armijo · Former Chairman of the Board, American Marketing Association</figcaption>
         </figure>
       </div>
-      <figure class="ama-hero-art">
+      <figure class="ama-hero-art" data-hero-parallax-art>
         <svg class="ama-hero-scene" viewBox="575 74 568 476" role="img" aria-label="An AMA member in front of a sage circle, surrounded by floating messages, two community badges, and content including an article, a template, and an event invitation.">
           <defs>
             <image id="ama-member-art" href="{{ "images/work/association/hero-objects.webp" | relURL }}" width="1448" height="1086"/>
@@ -54,34 +54,36 @@
             </g>
           </defs>
           <circle class="ama-member-halo" cx="831" cy="344" r="188" fill="#cdd1c5"/>
-          <image href="{{ "images/work/association/member.webp" | relURL }}" x="678" y="158" width="307" height="384"/>
-          <g transform="translate(656 405)">
-            <g class="ama-floater ama-floater-left">
-              <g transform="scale(.477)">
-                <circle cx="-3" cy="4" r="130" fill="#b28b75"/>
-                <circle r="129" fill="url(#ama-community-peach)" stroke="#fae0c7" stroke-width="3"/>
-                <use href="#ama-community-group" fill="url(#ama-community-teal)"/>
+          <image class="ama-member-portrait" href="{{ "images/work/association/member.webp" | relURL }}" x="678" y="158" width="307" height="384"/>
+          <g class="ama-hero-icons">
+            <g transform="translate(656 405)">
+              <g class="ama-floater">
+                <g transform="scale(.477)">
+                  <circle cx="-3" cy="4" r="130" fill="#b28b75"/>
+                  <circle r="129" fill="url(#ama-community-peach)" stroke="#fae0c7" stroke-width="3"/>
+                  <use href="#ama-community-group" fill="url(#ama-community-teal)"/>
+                </g>
               </g>
             </g>
-          </g>
-          <g transform="translate(990 190)">
-            <g class="ama-floater ama-floater-right">
-              <g transform="scale(.488)">
-                <circle cx="-3" cy="4" r="130" fill="#91a48a"/>
-                <circle r="129" fill="url(#ama-community-sage)" stroke="#dce8d4" stroke-width="3"/>
-                <use href="#ama-community-group" fill="url(#ama-community-coral)"/>
+            <g transform="translate(990 190)">
+              <g class="ama-floater">
+                <g transform="scale(.488)">
+                  <circle cx="-3" cy="4" r="130" fill="#91a48a"/>
+                  <circle r="129" fill="url(#ama-community-sage)" stroke="#dce8d4" stroke-width="3"/>
+                  <use href="#ama-community-group" fill="url(#ama-community-coral)"/>
+                </g>
               </g>
             </g>
-          </g>
-          <g class="ama-floater ama-floater-messages">
-            <g transform="translate(942 355) scale(.374) translate(-382 -14)">
-              <path d="M594 207H874V216Q869 233 839 238L838 260Q838 270 828 265L802 243Q797 238 789 238L631 231Q605 230 594 217Z" fill="url(#ama-message-bottom)"/>
-              <use href="#ama-member-art" clip-path="url(#ama-messages-cut)"/>
+            <g class="ama-floater">
+              <g transform="translate(942 355) scale(.374) translate(-382 -14)">
+                <path d="M594 207H874V216Q869 233 839 238L838 260Q838 270 828 265L802 243Q797 238 789 238L631 231Q605 230 594 217Z" fill="url(#ama-message-bottom)"/>
+                <use href="#ama-member-art" clip-path="url(#ama-messages-cut)"/>
+              </g>
             </g>
-          </g>
-          <g class="ama-floater ama-floater-content">
-            <g transform="translate(686 160) rotate(-25) scale(.31) translate(-1135 -835)">
-              <use href="#ama-member-art" clip-path="url(#ama-content-cut)"/>
+            <g class="ama-floater">
+              <g transform="translate(686 160) rotate(-25) scale(.31) translate(-1135 -835)">
+                <use href="#ama-member-art" clip-path="url(#ama-content-cut)"/>
+              </g>
             </g>
           </g>
         </svg>
@@ -102,7 +104,7 @@
       <div><p class="case-kicker">The challenge</p><h2 class="case-section-title">Membership was declining. The organization was fragmented.</h2></div>
       <div class="challenge-context">
         <p class="case-lede">Declining membership threatened the AMA’s financial stability. Across its national organization and chapter network, more than 400 brand expressions made for uneven member experiences. Legacy systems made it hard to deliver a consistent offer.</p>
-        <p class="case-lede">The work called for a redesign of <strong>what members got, how they got it, and how staff and volunteers supported it</strong>.</p>
+        <p class="case-lede">The work called for a redesign of <strong class="case-inline-highlight">what members got, how they got it, and how staff and volunteers supported it</strong>.</p>
       </div>
     </div>
   </section>
@@ -222,7 +224,7 @@
       <h3>Implementation plan</h3>
       <p class="case-lede">The plan tracked technology releases, My AMA unbundling tests, data work, and change management simultaneously. We could easily update it as dependencies and priorities changed.</p>
     </div>
-    <figure class="ama-laptop-stage">
+    <figure class="ama-laptop-stage" data-laptop-parallax>
       <div class="ama-laptop-preview">
         <svg class="ama-laptop-photo" viewBox="0 0 1774 887" role="img" aria-label="Laptop showing the implementation plan, including technology releases, My AMA testing and data work, and the change management transition.">
           <foreignObject x="0" y="0" width="1774" height="887">
@@ -282,6 +284,8 @@
 {{ end }}
 
 {{ define "scripts" }}
+  {{ $heroScript := resources.Get "js/hero-parallax.js" | minify | fingerprint }}
+  <script src="{{ $heroScript.RelPermalink }}" integrity="{{ $heroScript.Data.Integrity }}" defer></script>
   {{ $script := resources.Get "js/association.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
 {{ end }}

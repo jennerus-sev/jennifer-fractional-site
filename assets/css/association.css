@@ -15,17 +15,13 @@
   height: auto;
   overflow: visible;
 }
-.ama-floater {
-  animation: ama-icon-float 6.4s ease-in-out -1s infinite alternate;
-  filter: drop-shadow(1px 2px 3px #2b21161e);
+.ama-member-halo {
+  transform: translate(calc(var(--hero-scroll, 0) * -19px), calc(var(--hero-scroll, 0) * 24px));
 }
-.ama-floater-right { animation-duration: 7.4s; animation-delay: -5.1s; }
-.ama-floater-messages { animation-duration: 7.8s; animation-delay: -2.6s; }
-.ama-floater-content { animation-duration: 6.8s; animation-delay: -4.5s; }
-@keyframes ama-icon-float {
-  from { transform: translateY(4px); }
-  to { transform: translateY(-4px); }
+.ama-hero-icons {
+  transform: translateY(calc(var(--hero-scroll, 0) * -31px));
 }
+.ama-floater { filter: drop-shadow(1px 2px 3px #2b21161e); }
 
 .ama-change-icon.operations i:first-child {
   top: 5px;
@@ -174,9 +170,12 @@
   margin: 0 0 12px;
   font: 600 clamp(19px, 2.15vw, 25px)/1.15 var(--sans);
 }
-.ama-laptop-stage { margin: 25px 0 0; }
+.ama-laptop-stage { margin: 25px 0 0; overflow: hidden; }
 .ama-laptop-preview {
   background: #604731 var(--ama-laptop) center / cover no-repeat;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ama-laptop-preview { transform: translateY(var(--laptop-shift, 0px)) scale(1.15); }
 }
 .ama-laptop-photo {
   display: block;
@@ -398,5 +397,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ama-floater { animation: none; }
+  .ama-member-halo, .ama-hero-icons { transform: none; }
 }

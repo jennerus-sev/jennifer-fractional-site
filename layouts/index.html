@@ -99,7 +99,7 @@
             <a class="case-study-link" href="{{ .RelPermalink }}">Read the case study <span aria-hidden="true">↗</span></a>
           {{ end }}{{ end }}
         </div>
-        <figure class="case-image {{ .color }}"><img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy"></figure>
+        <figure class="case-image {{ .color }}{{ with .image_class }} {{ . }}{{ end }}"><img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy"></figure>
       </article>
       {{ end }}
     </div>
@@ -135,7 +135,7 @@
   <section class="career-group">
     <h3>Current fractional leadership</h3>
     <ul>
-      <li><strong>Chief Member Experience Officer</strong><span>Healthtech Benefits Solutions, LLC</span></li>
+      <li><strong>Design Strategist</strong><span>Institute for Healthcare Delivery Design</span></li>
       <li><strong>President-Elect</strong><span>AMA Chicago · Association leadership</span></li>
       <li><strong>Experience Design Leader</strong><span>Confidential finance and investment advisory firm</span></li>
     </ul>
@@ -144,6 +144,7 @@
   <section class="career-group">
     <h3>Past fractional &amp; advisory leadership</h3>
     <ul>
+      <li><strong>Chief Member Experience Officer</strong><span>Healthtech Benefits Solutions, LLC</span></li>
       <li><strong>Human-Centered Design Leader</strong><span>UCLA Health</span></li>
       <li><strong>Content Strategy &amp; Innovation Lead</strong><span>Allstate</span></li>
       <li><strong>Creative Director</strong><span>Agency and brand creative teams</span></li>

@@ -1,0 +1,219 @@
+{{ define "head" }}
+  {{ if .Draft }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  {{ $styles := resources.Get "css/storytelling.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+  <section class="case-hero csw-hero" data-hero-parallax>
+    <div class="case-shell case-hero-grid">
+      <div class="case-hero-text">
+        <p class="case-kicker">Storytelling &amp; digital advocacy</p>
+        <h1>Bridging reflection <em>and action.</em></h1>
+        <p class="case-deck">How might narrative advocacy translate into a digital experience that helps everyday people turn personal reflection on injustice into civic action? The study drew on the Center for Story and Witness’s in-person workshop to design and test a self-guided experience.</p>
+        <div class="case-client"><span>Organization</span><strong>Center for Story and Witness</strong></div>
+      </div>
+      <figure class="csw-hero-art" data-hero-parallax-art>
+        <svg class="csw-hero-scene" viewBox="0 0 1312 1199" role="img" aria-label="Illustration of a woman writing in a journal, with an audio story and a megaphone beside her.">
+          <defs>
+            <image id="csw-hero-source" href="{{ "images/work/storytelling/hero.webp" | relURL }}" width="1312" height="1199"/>
+            <path id="csw-audio-region" d="M20 230H515V512H440V536H20Z"/>
+            <path id="csw-megaphone-region" d="M925 348H1312V674H1006L982 644L954 620L929 600Z"/>
+            <clipPath id="csw-audio-clip"><use href="#csw-audio-region"/></clipPath>
+            <clipPath id="csw-megaphone-clip"><use href="#csw-megaphone-region"/></clipPath>
+            <mask id="csw-portrait-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1312" height="1199">
+              <rect width="1312" height="1199" fill="white"/>
+              <use href="#csw-audio-region" fill="black"/>
+              <use href="#csw-megaphone-region" fill="black"/>
+            </mask>
+          </defs>
+          <use class="csw-hero-portrait" href="#csw-hero-source" mask="url(#csw-portrait-mask)"/>
+          <g class="csw-hero-icons">
+            <use href="#csw-hero-source" clip-path="url(#csw-audio-clip)"/>
+            <use href="#csw-hero-source" clip-path="url(#csw-megaphone-clip)"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <div class="focus-strip">
+    <div class="case-shell focus-grid">
+      <div class="focus-thing"><div class="mini-icon people" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div><h3>Mixed-method research</h3><p>Study what helps people move from caring about an issue to acting on it.</p></div></div>
+      <div class="focus-thing"><svg class="mini-icon csw-heart" viewBox="0 0 58 52" aria-hidden="true"><path d="M29 43C24 39 9 28 9 17 9 5 24 4 29 14 34 4 49 5 49 17 49 28 34 39 29 43Z" fill="var(--orange)"/></svg><div><h3>Trauma-informed design</h3><p>Build in consent, privacy, and control over pacing.</p></div></div>
+      <div class="focus-thing"><div class="mini-icon technology" aria-hidden="true"><i></i><i></i></div><div><h3>Prototyping and testing</h3><p>Test the workshop’s emotional arc and the transition to action.</p></div></div>
+    </div>
+  </div>
+
+  <section class="case-section case-challenge">
+    <div class="case-shell challenge-grid">
+      <div>
+        <p class="case-kicker">The challenge</p>
+        <h2 class="case-section-title">A story can move someone. What comes next?</h2>
+      </div>
+      <div class="challenge-context">
+        <p class="case-lede">At an in-person workshop, a facilitator can give people time to reflect, read the room, and respond when someone needs support. The Center needed a way to carry that care into a self-guided experience.</p>
+        <p class="case-lede">The study focused on people who care deeply about social issues and may feel unsure how to get involved. <strong class="case-inline-highlight csw-challenge-question">How could a digital workshop help someone connect a story to a meaningful next step?</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-approach">
+    <div class="case-shell">
+      <p class="case-kicker">Approach</p>
+      <h2 class="case-section-title">The story of the study.</h2>
+      <ol class="approach-grid" role="list">
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">01</span><h3>Identify gaps</h3><p>Identify where people felt moved by an issue and where they struggled to act on it.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">02</span><h3>Research, theory, and literature</h3><p>Use mixed-method research and theory to understand how storytelling, behavioral design, and trauma-informed practice could help.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">03</span><h3>Prototype and test</h3><p>Build and test a self-guided digital workshop based on CSW’s in-person storytelling model.</p></li>
+        <li class="approach-step"><span class="approach-index" aria-hidden="true">04</span><h3>Findings and next steps</h3><p>Use what resonated and where people got stuck to refine the workshop and plan the next tests with CSW.</p></li>
+      </ol>
+
+      <div class="csw-frameworks">
+        <div>
+          <h3 class="csw-subheading">Theoretical frameworks</h3>
+          <ol class="csw-framework-notes" role="list">
+            <li>
+              <span class="csw-framework-number" aria-hidden="true">01</span>
+              <div><h4>Behavioral design</h4><p>Wendel’s five-step model for behavior change helped define a clear, achievable next action.</p><small>Stephen Wendel (2020). <cite><a href="https://www.oreilly.com/library/view/designing-for-behavior/9781492056027/" target="_blank" rel="noopener noreferrer">Designing for Behavior Change, 2nd Edition</a></cite>.</small></div>
+            </li>
+            <li>
+              <span class="csw-framework-number" aria-hidden="true">02</span>
+              <div><h4>Narrative transportation theory</h4><p>Becoming absorbed in a story can influence beliefs and shift perspective.</p><small>Melanie C. Green and Timothy C. Brock (2000). <cite><a href="https://pubmed.ncbi.nlm.nih.gov/11079236/" target="_blank" rel="noopener noreferrer">The Role of Transportation in the Persuasiveness of Public Narratives</a></cite>.</small></div>
+            </li>
+            <li>
+              <span class="csw-framework-number" aria-hidden="true">03</span>
+              <div><h4>Trauma-informed design</h4><p>Consent, pacing, and emotional safety shaped how people could move through the workshop.</p><small>Megan Legawiec (2025). <cite><a href="https://uxcontent.com/a-guide-to-trauma-informed-content-design/" target="_blank" rel="noopener noreferrer">Trauma-informed content design: a comprehensive guide</a></cite>.</small></div>
+            </li>
+            <li>
+              <span class="csw-framework-number" aria-hidden="true">04</span>
+              <div><h4>Communication theory</h4><p>Erwin’s work on framing helped connect the invitation to participate with what people already cared about.</p><small>Kim Erwin (2014). <cite><a href="https://www.oreilly.com/library/view/communicating-the-new/9781118394175/" target="_blank" rel="noopener noreferrer">Communicating the New: Methods to Shape and Accelerate Innovation</a></cite>.</small></div>
+            </li>
+          </ol>
+        </div>
+        <figure class="csw-framework-sketch">
+          <img src="{{ "images/work/storytelling/theoretical-frameworks.webp" | relURL }}" width="1448" height="1086" alt="Whiteboard sketch with four quadrants for behavioral design, narrative transportation theory, trauma-informed design, and communication theory." loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-blueprint csw-research">
+    <div class="case-shell">
+      <p class="case-kicker">Research</p>
+      <h2 class="case-section-title">Understand what would help people take part.</h2>
+      <p class="case-lede">The study combined stakeholder input, secondary research, platform analysis, and audience research. Two check-ins with CSW connected the early research and later usability findings to the organization’s decisions.</p>
+      <div class="csw-method-grid">
+        <div>
+          <dl class="csw-method-notes">
+            <dt>Stakeholder interviews</dt>
+            <dd>CSW leadership described why narrative integrity, emotional pacing, and consent matter in a facilitated workshop.</dd>
+            <dt>Secondary research and platform review</dt>
+            <dd>A literature review and analysis of 14 storytelling and civic-action tools surfaced patterns in onboarding, trust, and the transition to action.</dd>
+            <dt>Audience research and survey</dt>
+            <dd>Early research informed three provisional personas. A survey of 27 people explored motivations, sharing preferences, and realistic ways to take action.</dd>
+            <dt>Stakeholder check-ins and prototype usability</dt>
+            <dd>A check-in helped shape the prototype direction. Six moderated sessions tested the workshop, and a later check-in turned the findings into next steps.</dd>
+          </dl>
+          <a class="csw-link" href="https://docs.google.com/presentation/d/1_Mlrjz8ufVW6ksCaCiWTjlYW2DwslFHWf9VczOQuN0M/edit#slide=id.g37485918b41_0_50" target="_blank" rel="noopener noreferrer">View the research methodology slide <span aria-hidden="true">↗</span></a>
+        </div>
+        {{ partial "storytelling-methodology.html" . }}
+      </div>
+      <div class="csw-personas">
+        <h3 class="csw-subheading">Provisional personas</h3>
+        <p class="case-lede">Three profiles explored how people with different routines and motivations might enter the same workshop.</p>
+        <div class="csw-persona-grid">
+          <article class="csw-persona">
+            <img src="{{ "images/work/storytelling/miles.webp" | relURL }}" width="276" height="276" alt="" loading="lazy">
+            <div><h3>Miles Reed</h3><p class="csw-persona-role">Digital cause amplifier</p><p>Shares causes online and wants a feasible next step that feels useful.</p><small>Photo by Tamarcus Brown on Unsplash</small></div>
+          </article>
+          <article class="csw-persona">
+            <img src="{{ "images/work/storytelling/rachel.webp" | relURL }}" width="276" height="276" alt="" loading="lazy">
+            <div><h3>Rachel Martinez</h3><p class="csw-persona-role">Story-driven social sharer</p><p>Connects with personal stories and needs a way to take part that fits a busy life.</p><small>Photo by Omar Lopez on Unsplash</small></div>
+          </article>
+          <article class="csw-persona">
+            <img src="{{ "images/work/storytelling/helen.webp" | relURL }}" width="276" height="276" alt="" loading="lazy">
+            <div><h3>Helen Simmons</h3><p class="csw-persona-role">Purpose-seeking retiree</p><p>Values personal connection and wants a clear, trustworthy way to contribute.</p><small>Photo by Samia Liamani on Unsplash</small></div>
+          </article>
+        </div>
+        <a class="csw-link" href="https://docs.google.com/presentation/d/1Y0nasR_-u-0TJj5M7-FPFctZU8sSU2ArhIvFi-3FAJI/present?slide=id.p1" target="_blank" rel="noopener noreferrer">View the persona slides <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-research csw-findings">
+    <div class="case-shell outcomes-wrap">
+      <div>
+        <p class="case-kicker">Research findings</p>
+        <h2 class="case-section-title">What helps people move from reflection to action?</h2>
+        <a class="research-link" href="https://docs.google.com/document/d/1QVhROW1AkpuQ1I75_M8oUAkS73XCbvYtr_KFf2Roej0/edit?tab=t.0#heading=h.nbeczua5zw46" target="_blank" rel="noopener noreferrer">Read the full research paper <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="outcome-list">
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Storytelling opens the door</strong><p>Stories can prompt reflection, and people differ in their readiness to share. In the survey, 79% preferred talking privately with someone they trust and 46% reported sharing a story or cause on social media.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Motivation is there. The next step is unclear.</strong><p>Among survey respondents, 36% wanted to act but weren’t sure where to start. Many of the tools reviewed offered storytelling or action without a clear way to move between them.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Trust and safety come first</strong><p>CSW’s facilitation practice and the literature emphasized consent, privacy, and control over pacing. Those safeguards needed to be visible before people shared personal writing.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Small wins make an effort feel worthwhile</strong><p>Survey responses pointed to a need for acknowledgment and a way to see what a contribution accomplished, even when the action was small or private.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Framing and feasibility drive participation</strong><p>People responded to invitations grounded in what mattered to them. Talking with someone, volunteering, or donating felt more achievable to many respondents than a broad call to activism.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section csw-prototype">
+    <div class="case-shell">
+      <div class="csw-prototype-grid">
+        <div>
+          <p class="case-kicker">Prototype and testing</p>
+          <h2 class="case-section-title">Make space for someone’s own story.</h2>
+          <p class="case-lede"><em>Your Voice Matters</em> was a high-fidelity Figma prototype. It set expectations up front, offered private reflection and writing prompts, and let participants decide whether sharing or taking action felt right for them.</p>
+          <a class="csw-link" href="https://www.figma.com/proto/bdBhKsEv82uceNB2pNIqlZ/CSW-Workshop-Prototype?page-id=624%3A4726&amp;node-id=624-4727&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=624%3A4727" target="_blank" rel="noopener noreferrer">Open the workshop prototype in Figma <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="csw-prototype-art">
+          <img src="{{ "images/work/storytelling/workshop-prototype.webp" | relURL }}" width="1280" height="805" alt="Original Your Voice Matters workshop prototype displayed on a laptop, with a woman writing and the heading Your Story. Your Pace. Real Impact." loading="lazy">
+        </figure>
+      </div>
+      <div class="csw-journey">
+        <article><h3>Hear a story</h3><p>Miles’ story showed how a personal experience can help someone see an issue differently.</p><a class="csw-link" href="https://drive.google.com/file/d/1JiLabKx6q-H_oj34CnnD0PZ7s5A5SbUM/view" target="_blank" rel="noopener noreferrer">Watch Miles’ story <span aria-hidden="true">↗</span></a></article>
+        <article><h3>Reflect privately</h3><p>A short prompt invited participants to connect what they heard with their own experiences.</p></article>
+        <article><h3>Write at your pace</h3><p>Optional prompts helped participants develop their own story and decide whether to keep it private.</p></article>
+        <article><h3>Choose what comes next</h3><p>Participants could finish with a reflection or explore a small action that felt manageable.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-outcomes csw-usability">
+    <div class="case-shell outcomes-wrap">
+      <div><p class="case-kicker">Prototype usability findings</p><h2 class="case-section-title">The story resonated. The path forward needed more clarity.</h2><p class="case-lede">In six moderated sessions, Miles’ video helped participants understand the workshop’s purpose. Testing showed where the experience needed more guidance, choice, and time.</p></div>
+      <div class="outcome-list">
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Participants skipped key instructions</strong><p>Some missed copy and even headings. Important guidance needed more visible cues at the moment it was relevant.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>People wanted more stories to choose from</strong><p>Participants asked for a library with a wider range of stories and lived experiences.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>Motivations called for different paths</strong><p>Participants wanted options for personal reflection, advocacy, or memoir, with next steps tied to the issue or story they chose.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>The emotional tone worked. Privacy and purpose needed clearer cues.</strong><p>Participants wanted repeated reassurance about what stayed private, what sharing meant, and where they were in the workshop.</p></div></article>
+        <article><span class="section-check" aria-hidden="true"></span><div><strong>A short format could open the door</strong><p>Several participants doubted they could move from reflection to meaningful action in a few minutes. The feedback pointed to a need for longer, more guided options.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section csw-roadmap">
+    <div class="case-shell">
+      <p class="case-kicker">Roadmap and recommendations</p>
+      <h2 class="case-section-title">Test demand before building the full digital workshop.</h2>
+      <p class="case-lede">The roadmap was co-created with CSW leadership after the prototype and test findings were presented. The first proposed test was an in-person storytelling workshop to learn whether people would sign up and what they would pay.</p>
+      <ol class="csw-roadmap-steps" role="list" aria-label="Proposed next steps">
+        <li><h3>Pilot in person</h3><p>Test demand and pricing for a facilitated storytelling workshop.</p></li>
+        <li><h3>Try free digital prompts</h3><p>Give people a short, low-pressure way to experience the approach.</p></li>
+        <li><h3>Test distinct paths</h3><p>Explore separate options for reflection, advocacy, and memoir.</p></li>
+        <li><h3>Develop the online workshop</h3><p>Adapt the material for an expert-led format and test its usability and value.</p></li>
+        <li><h3>Pilot with partners</h3><p>Explore partner-hosted workshops and broader beta testing.</p></li>
+      </ol>
+      <a class="csw-link" href="https://docs.google.com/presentation/d/1jl5maTLuCEwDirUmbYi3VHFbNPHRxq-W4yUrOd_g7tg/present?slide=id.g37485918b41_0_909" target="_blank" rel="noopener noreferrer">Open the roadmap and recommendations <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+  {{ $script := resources.Get "js/hero-parallax.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ end }}

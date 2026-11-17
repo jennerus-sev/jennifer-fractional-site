@@ -149,6 +149,13 @@
 }
 .challenge-context p { margin-bottom: 20px; }
 .challenge-context strong { font-weight: 700; }
+.case-inline-highlight {
+  padding: .03em .23em;
+  background: var(--case-highlight-background, var(--dark));
+  color: var(--cream);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 .case-research { background: var(--dark); color: var(--cream); }
 .case-research .case-kicker, .research-link { color: var(--peach); }
 .case-insights {
