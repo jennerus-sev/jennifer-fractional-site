@@ -151,7 +151,7 @@
 .challenge-context strong { font-weight: 700; }
 .case-inline-highlight {
   padding: .03em .23em;
-  background: var(--case-highlight-background, var(--dark));
+  background: var(--deep-teal);
   color: var(--cream);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;

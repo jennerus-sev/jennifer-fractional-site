@@ -42,7 +42,6 @@
   outline: 2px solid currentColor;
   outline-offset: 5px;
 }
-.csw-challenge-question { --case-highlight-background: var(--deep-teal); }
 .csw-frameworks,
 .csw-method-grid {
   display: grid;
